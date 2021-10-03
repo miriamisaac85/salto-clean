@@ -1,0 +1,22 @@
+salesforce.GlobalValueSet Intsights_Global {
+  fullName = "Intsights_Global"
+  customValue = [
+    {
+      fullName = "ValueGlobal1"
+      default = false
+      label = "ValueGlobal1"
+    },
+    {
+      fullName = "ValueGlobal2"
+      default = false
+      label = "ValueGlobal2"
+    },
+    {
+      fullName = "ValueGlobal3"
+      default = false
+      label = "ValueGlobal3"
+    },
+  ]
+  masterLabel = "Intsights Global"
+  sorted = false
+}

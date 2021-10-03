@@ -1,0 +1,157 @@
+type salesforce.Opportunity {
+  salesforce.Lookup SBQQ__AmendedContract__c {
+    apiName = "Opportunity.SBQQ__AmendedContract__c"
+    label = "Amended Contract"
+    referenceTo = [
+      salesforce.Contract,
+    ]
+    inlineHelpText = "Lookup to your Amended Contract."
+    createable = true
+    updateable = true
+    relationshipName = "AmendmentOpportunities"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Indicates the relationship to your Amended Contract."
+    externalId = false
+    relationshipLabel = "Amendment Opportunities"
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Contracted__c {
+    apiName = "Opportunity.SBQQ__Contracted__c"
+    label = "Contracted"
+    defaultValue = false
+    inlineHelpText = "Salesforce CPQ uses this field to automatically convert assets and subscriptions."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Internal flag used to kick off automatic asset and subscription conversion."
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__CreateContractedPrices__c {
+    apiName = "Opportunity.SBQQ__CreateContractedPrices__c"
+    label = "Create Contracted Prices"
+    defaultValue = false
+    inlineHelpText = "Select this checkbox to create Contracted Prices without creating a Contract."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Select this checkbox to create Contracted Prices without creating a Contract."
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__OrderGroupID__c {
+    apiName = "Opportunity.SBQQ__OrderGroupID__c"
+    label = "Order Group ID"
+    inlineHelpText = "The unique identifier for the Amend:Re-Quote transaction, which is the original primary quote's ID."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The unique identifier for the Amend:Re-Quote transaction, which is the original primary quote's ID. This is not a reference."
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Ordered__c {
+    apiName = "Opportunity.SBQQ__Ordered__c"
+    label = "Ordered"
+    defaultValue = false
+    inlineHelpText = "Select this checkbox to automatically create an order from the primary quote."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Internal flag that drives automatic order creation."
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__PrimaryQuote__c {
+    apiName = "Opportunity.SBQQ__PrimaryQuote__c"
+    label = "Primary Quote"
+    referenceTo = [
+      "SBQQ__Quote__c",
+    ]
+    inlineHelpText = "Salesforce CPQ uses this to point to the primary quote on this opportunity."
+    createable = true
+    updateable = true
+    relationshipName = "PrimaryOpportunities"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Points to primary quote on this opportunity."
+    externalId = false
+    lookupFilter = {
+      active = true
+      filterItems = [
+        {
+          field = "$Source.Id"
+          operation = "equals"
+          valueField = "SBQQ__Quote__c.SBQQ__Opportunity2__c"
+        },
+      ]
+      isOptional = false
+    }
+    relationshipLabel = "Opportunities"
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Text SBQQ__QuotePricebookId__c {
+    apiName = "Opportunity.SBQQ__QuotePricebookId__c"
+    label = "Quote Pricebook Id"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    description = "Custom pricebook ID field that updates the standard Pricebook2Id field. Use to automatically drive pricebook selection from workflow rules."
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox SBQQ__Renewal__c {
+    apiName = "Opportunity.SBQQ__Renewal__c"
+    label = "Renewal"
+    defaultValue = false
+    inlineHelpText = "Indicates this opportunity is a renewal opportunity."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates this opportunity is a renewal opportunity."
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Lookup SBQQ__RenewedContract__c {
+    apiName = "Opportunity.SBQQ__RenewedContract__c"
+    label = "Renewed Contract"
+    referenceTo = [
+      salesforce.Contract,
+    ]
+    inlineHelpText = "Contract being renewed by this renewal opportunity. If the several contracts roll up to this opportunity, this points at the master contract."
+    createable = true
+    updateable = true
+    relationshipName = "RenewalOpportunities"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Contract being renewed by this renewal opportunity. In case opportunity rolls up several contracts this points at the master contract."
+    externalId = false
+    relationshipLabel = "Renewal Opportunities"
+    trackFeedHistory = false
+    trackTrending = false
+  }
+}

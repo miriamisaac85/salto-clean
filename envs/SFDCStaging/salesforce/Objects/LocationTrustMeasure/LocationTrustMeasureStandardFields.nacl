@@ -1,0 +1,166 @@
+type salesforce.LocationTrustMeasure {
+  serviceid Id {
+    apiName = "LocationTrustMeasure.Id"
+    label = "LocationTrustMeasure ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LocationTrustMeasure.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LocationTrustMeasure.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LocationTrustMeasure.Name"
+    label = "Location Trust Measure Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LocationTrustMeasure.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LocationTrustMeasure.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LocationTrustMeasure.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LocationTrustMeasure.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LocationTrustMeasure.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LocationId {
+    apiName = "LocationTrustMeasure.LocationId"
+    label = "Location ID"
+    _required = true
+    referenceTo = [
+      salesforce.Location,
+    ]
+    inlineHelpText = "The store, hotel, or other physical space that your business occupies. Each trust measure lives at a single location. If no external reference exists on the location, the trust card won’t display. If you get an error, edit the location to add an external reference."
+    createable = true
+    updateable = true
+    relationshipName = "Location"
+    queryable = true
+  }
+  salesforce.Text Title {
+    apiName = "LocationTrustMeasure.Title"
+    label = "Title"
+    _required = true
+    inlineHelpText = "The header for your trust measure that’s displayed to viewers. Keep it short and sweet! You can use up to 40 characters, but 20 is best to keep your title on one line."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 40
+    queryable = true
+  }
+  salesforce.Checkbox IsVisibleInPublic {
+    apiName = "LocationTrustMeasure.IsVisibleInPublic"
+    label = "Trust Measure Is Published"
+    defaultValue = false
+    inlineHelpText = "Publishes this trust measure to the location you select."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text IconUrl {
+    apiName = "LocationTrustMeasure.IconUrl"
+    label = "Icon Url"
+    inlineHelpText = "The URL where your icon is hosted. You create and host the icon for each trust measure."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Text Description {
+    apiName = "LocationTrustMeasure.Description"
+    label = "Description"
+    _required = true
+    inlineHelpText = "Explain how you’ll carry out the trust measure. Be concise. Prioritize clarity over complete sentences — you have only 250 characters."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.Number SortOrder {
+    apiName = "LocationTrustMeasure.SortOrder"
+    label = "Display Order"
+    precision = 9
+    inlineHelpText = "Indicates where this trust measure is positioned in your layout. For example, in a banner layout, a display order of 1 places the trust card to the left. A display order of 2 places the trust measure to the right of 1."
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text LocationExternalReference {
+    apiName = "LocationTrustMeasure.LocationExternalReference"
+    label = "Location External Reference"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+}

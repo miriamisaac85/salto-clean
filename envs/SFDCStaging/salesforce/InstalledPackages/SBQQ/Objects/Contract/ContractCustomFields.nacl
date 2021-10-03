@@ -1,0 +1,475 @@
+type salesforce.Contract {
+  salesforce.FormulaNumber SBQQ__ActiveContract__c {
+    apiName = "Contract.SBQQ__ActiveContract__c"
+    label = "Active Contract"
+    precision = 18
+    scale = 0
+    formula = "IF(AND(ISPICKVAL(StatusCode,'Activated'), OR(AND(Not(SBQQ__Evergreen__c), EndDate >= TODAY()), SBQQ__Evergreen__c)),1,0)"
+    inlineHelpText = "Determines if this contract is in effect."
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Determines if this contract is in effect."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__AmendmentOpportunityRecordTypeId__c {
+    apiName = "Contract.SBQQ__AmendmentOpportunityRecordTypeId__c"
+    label = "Amendment Opportunity Record Type Id"
+    inlineHelpText = "Record Type of the Amendment Opportunity, unless otherwise specified."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    description = "Record Type of the Amendment Opportunity, unless otherwise specified."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__AmendmentOpportunityStage__c {
+    apiName = "Contract.SBQQ__AmendmentOpportunityStage__c"
+    label = "Amendment Opportunity Stage"
+    inlineHelpText = "The current stage of the Amendment Opportunity."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 60
+    queryable = true
+    deprecated = false
+    description = "The current stage of the Amendment Opportunity."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__AmendmentOwner__c {
+    apiName = "Contract.SBQQ__AmendmentOwner__c"
+    label = "Amendment Owner"
+    referenceTo = [
+      salesforce.User,
+    ]
+    inlineHelpText = "Owner of the original opportunity."
+    createable = true
+    updateable = true
+    relationshipName = "AmendmentContracts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Owner of the original opportunity."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__AmendmentPricebookId__c {
+    apiName = "Contract.SBQQ__AmendmentPricebookId__c"
+    label = "Amendment Pricebook Id"
+    inlineHelpText = "Price Book Id of your Amendment."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    description = "Price Book Id of your Amendment."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__AmendmentRenewalBehavior__c {
+    apiName = "Contract.SBQQ__AmendmentRenewalBehavior__c"
+    label = "Amendment & Renewal Behavior"
+    valueSet = [
+      {
+        fullName = "Latest End Date"
+        default = true
+        label = "Latest End Date"
+      },
+      {
+        fullName = "Earliest End Date"
+        default = false
+        label = "Earliest End Date"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "The basis for which a Renewal Start Date and Amendment End Date are calculated."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The basis for which a Renewal Start Date and Amendment End Date are calculated."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Date SBQQ__AmendmentStartDate__c {
+    apiName = "Contract.SBQQ__AmendmentStartDate__c"
+    label = "Amendment Start Date"
+    inlineHelpText = "Start Date of your Amendment. If blank, Amendment will start on today's date."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Start Date of your Amendment. If blank, Amendment will start on today's date."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__DefaultRenewalContactRoles__c {
+    apiName = "Contract.SBQQ__DefaultRenewalContactRoles__c"
+    label = "Default Renewal Contact Roles"
+    defaultValue = true
+    inlineHelpText = "Select to include contact roles from the original opportunity in the renewal opportunity."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Select to include contact roles from the original opportunity in the renewal opportunity."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__DefaultRenewalPartners__c {
+    apiName = "Contract.SBQQ__DefaultRenewalPartners__c"
+    label = "Default Renewal Partners"
+    defaultValue = true
+    inlineHelpText = "Select to include the original opportunity partners in renewal opportunity."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Select to include the original opportunity partners in renewal opportunity."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__DisableAmendmentCoTerm__c {
+    apiName = "Contract.SBQQ__DisableAmendmentCoTerm__c"
+    label = "Disable Amendment Co-Term"
+    defaultValue = false
+    inlineHelpText = "If unchecked, the Amendment Quote End Date will be set according to the Amendment & Renewal Behavior setting. If checked, then no End Date will be set."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "If unchecked, the Amendment Quote End Date will be set according to the Amendment & Renewal Behavior setting. If checked, then no End Date will be set."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__Evergreen__c {
+    apiName = "Contract.SBQQ__Evergreen__c"
+    label = "Evergreen"
+    defaultValue = false
+    inlineHelpText = "Indicates whether the contract is evergreen."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether the contract is evergreen."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.FormulaDate SBQQ__ExpirationDate__c {
+    apiName = "Contract.SBQQ__ExpirationDate__c"
+    label = "Expiration Date"
+    formula = "EndDate"
+    inlineHelpText = "Contract end date for use in time-based workflows."
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    description = "Contract end date for use in time-based workflows."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__MDQRenewalBehavior__c {
+    apiName = "Contract.SBQQ__MDQRenewalBehavior__c"
+    label = "MDQ Renewal Behavior"
+    valueSet = [
+      {
+        fullName = "De-segmented"
+        default = false
+        label = "De-segmented"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Defines how segmented subscription products will appear on renewal quotes. De-Segmented will renew as a standard quote line with the last segment's data."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Defines how segmented subscription products will appear on renewal quotes. De-Segmented will renew as a standard quote line with the last segment’s data."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Checkbox SBQQ__MasterContract__c {
+    apiName = "Contract.SBQQ__MasterContract__c"
+    label = "Master Contract"
+    defaultValue = false
+    inlineHelpText = "Select to designate this contract as the master contract for this account. Upon renewal, all contracts will be rolled into this one."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Select to designate this contract as the master contract for this account. Upon renewal, all contracts will be rolled into this one."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.FormulaText SBQQ__OpportunityPricebookId__c {
+    apiName = "Contract.SBQQ__OpportunityPricebookId__c"
+    label = "Opportunity or Quote Price Book ID"
+    formula = "IF(NOT(ISBLANK(SBQQ__Opportunity__c)), SBQQ__Opportunity__r.Pricebook2Id, SBQQ__Quote__r.SBQQ__PricebookId__c)"
+    inlineHelpText = "ID of the Price Book used from the original Opportunity."
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    deprecated = false
+    description = "Price Book ID of the related opportunity or quote."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__Opportunity__c {
+    apiName = "Contract.SBQQ__Opportunity__c"
+    label = "Opportunity"
+    referenceTo = [
+      salesforce.Opportunity,
+    ]
+    inlineHelpText = "The Opportunity from which this Contract was created."
+    createable = true
+    updateable = true
+    relationshipName = "Contracts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The Opportunity from which this Contract was created."
+    externalId = false
+    relationshipLabel = "Contracts"
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__Order__c {
+    apiName = "Contract.SBQQ__Order__c"
+    label = "Order"
+    referenceTo = [
+      salesforce.Order,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Contracts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Contracts"
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__PreserveBundleStructureUponRenewals__c {
+    apiName = "Contract.SBQQ__PreserveBundleStructureUponRenewals__c"
+    label = "Preserve Bundle Structure"
+    defaultValue = true
+    inlineHelpText = "Select the checkbox to maintain bundle hierarchy on renewal quotes."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Select to maintain bundle hierarchy on renewal quotes."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__Quote__c {
+    apiName = "Contract.SBQQ__Quote__c"
+    label = "Quote"
+    referenceTo = [
+      "SBQQ__Quote__c",
+    ]
+    inlineHelpText = "Quote from which this Contract was created."
+    createable = true
+    updateable = true
+    relationshipName = "Contracts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Quote from which this Contract was created."
+    externalId = false
+    relationshipLabel = "Contracts"
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__RenewalForecast__c {
+    apiName = "Contract.SBQQ__RenewalForecast__c"
+    label = "Renewal Forecast"
+    defaultValue = false
+    inlineHelpText = "Select to trigger the generation of a renewal opportunity for forecasting purposes. Does not automatically generate a renewal quote."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Select to trigger the generation of a renewal opportunity for forecasting purposes. Does not automatically generate a renewal quote."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__RenewalOpportunityRecordTypeId__c {
+    apiName = "Contract.SBQQ__RenewalOpportunityRecordTypeId__c"
+    label = "Renewal Opportunity Record Type Id"
+    inlineHelpText = "Record type of renewal opportunity if different from the default."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    description = "Record type of renewal opportunity if different from the default."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__RenewalOpportunityStage__c {
+    apiName = "Contract.SBQQ__RenewalOpportunityStage__c"
+    label = "Renewal Opportunity Stage"
+    inlineHelpText = "Override the default opportunity stage for this renewal. This must be done prior to selecting Renewal Forecast to take effect on the renewal opportunity."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 60
+    queryable = true
+    deprecated = false
+    description = "Override the default opportunity stage for this renewal. This must be done prior to selecting Renewal Forecast to take effect on the renewal opportunity."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__RenewalOpportunity__c {
+    apiName = "Contract.SBQQ__RenewalOpportunity__c"
+    label = "Renewal Opportunity"
+    referenceTo = [
+      salesforce.Opportunity,
+    ]
+    inlineHelpText = "Renewal opportunity generated to track the renewal of this contract."
+    createable = true
+    updateable = true
+    relationshipName = "RenewedContracts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Renewal opportunity generated to track the renewal of this contract."
+    externalId = false
+    relationshipLabel = "Renewal Contracts"
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__RenewalOwner__c {
+    apiName = "Contract.SBQQ__RenewalOwner__c"
+    label = "Renewal Owner"
+    referenceTo = [
+      salesforce.User,
+    ]
+    inlineHelpText = "Owner of the original opportunity."
+    createable = true
+    updateable = true
+    relationshipName = "RenewalContracts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Owner of the original opportunity."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__RenewalPricebookId__c {
+    apiName = "Contract.SBQQ__RenewalPricebookId__c"
+    label = "Renewal Pricebook Id"
+    inlineHelpText = "Specify a price book ID to be used on Renewal Opportunities if you do not want to use the price book ID of the original opportunity."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 18
+    queryable = true
+    deprecated = false
+    description = "Specify a price book ID to be used on Renewal Opportunities if you do not want to use the price book ID of the original opportunity."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__RenewalQuoted__c {
+    apiName = "Contract.SBQQ__RenewalQuoted__c"
+    label = "Renewal Quoted"
+    defaultValue = false
+    inlineHelpText = "Select this option to automatically generate a renewal quote on renewal opportunities."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Select this option to automatically generate a renewal quote on renewal opportunities."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Number SBQQ__RenewalTerm__c {
+    apiName = "Contract.SBQQ__RenewalTerm__c"
+    label = "Renewal Term"
+    precision = 18
+    scale = 0
+    inlineHelpText = "Specify the term of the renewal. By default, it matches the original contract term."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Specify the term of the renewal. By default, it matches the original contract term."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Percent SBQQ__RenewalUpliftRate__c {
+    apiName = "Contract.SBQQ__RenewalUpliftRate__c"
+    label = "Renewal Uplift (%)"
+    inlineHelpText = "Rate of renewal price increases."
+    createable = true
+    updateable = true
+    scale = 3
+    precision = 11
+    queryable = true
+    deprecated = false
+    description = "Rate of renewal price increases."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__SubscriptionQuantitiesCombined__c {
+    apiName = "Contract.SBQQ__SubscriptionQuantitiesCombined__c"
+    label = "Combine Subscription Quantities"
+    defaultValue = false
+    inlineHelpText = "Select to combine quantities of Subscriptions for the same product into one line on Renewal Quotes and Amendments."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Select to combine quantities of Subscriptions for the same product into one line on Renewal Quotes and Amendments."
+    externalId = false
+    trackFeedHistory = false
+    trackHistory = "false"
+  }
+}

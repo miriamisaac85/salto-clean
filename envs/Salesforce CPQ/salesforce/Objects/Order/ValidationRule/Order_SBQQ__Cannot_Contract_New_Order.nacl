@@ -1,0 +1,10 @@
+salesforce.ValidationRule Order_SBQQ__Cannot_Contract_New_Order {
+  fullName = "Order.SBQQ__Cannot_Contract_New_Order"
+  active = true
+  errorConditionFormula = "AND(ISNEW(), SBQQ__Contracted__c)"
+  errorDisplayField = "SBQQ__Contracted__c"
+  errorMessage = "Can't contract the order. Activate the order and try again."
+  _parent = [
+    salesforce.Order,
+  ]
+}

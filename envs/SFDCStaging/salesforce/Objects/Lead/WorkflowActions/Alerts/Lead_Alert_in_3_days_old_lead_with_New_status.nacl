@@ -1,0 +1,15 @@
+salesforce.WorkflowAlert Lead_Alert_in_3_days_old_lead_with_New_status@vuuuuuuuu {
+  fullName = "Lead.Alert_in_3_days_old_lead_with_New_status"
+  description = "Alert in 3 days old lead with New status"
+  protected = false
+  recipients = [
+    {
+      type = "accountOwner"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = "unfiled$public/LeadsNewassignmentnotificationSAMPLE"
+  _parent = [
+    salesforce.Lead,
+  ]
+}

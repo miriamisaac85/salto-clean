@@ -1,0 +1,6 @@
+salesforce.CustomTab SBQQ__BlockPrice__c {
+  fullName = "SBQQ__BlockPrice__c"
+  customObject = true
+  description = "temp"
+  motif = "Custom36: Train"
+}

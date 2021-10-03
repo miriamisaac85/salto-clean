@@ -1,0 +1,5 @@
+salesforce.CustomTab SBQQ__LookupData__c {
+  fullName = "SBQQ__LookupData__c"
+  customObject = true
+  motif = "Custom51: Apple"
+}

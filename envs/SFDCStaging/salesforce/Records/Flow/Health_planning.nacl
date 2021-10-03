@@ -1,0 +1,144 @@
+salesforce.Flow Health_planning {
+  fullName = "Health_planning"
+  apiVersion = 51
+  decisions = [
+    {
+      processMetadataValues = {
+        name = "index"
+        value = {
+          numberValue = 0
+        }
+      }
+      name = "myDecision"
+      label = "myDecision"
+      locationX = 50
+      locationY = 0
+      defaultConnector = {
+        targetReference = "myDecision2"
+      }
+      defaultConnectorLabel = "default"
+      rules = [
+        {
+          name = "myRule_1"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "formula_myRule_1"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          label = "Opportunity is active"
+        },
+      ]
+    },
+    {
+      processMetadataValues = {
+        name = "index"
+        value = {
+          numberValue = 1
+        }
+      }
+      name = "myDecision2"
+      label = "myDecision2"
+      locationX = 50
+      locationY = 0
+      defaultConnectorLabel = "default"
+      rules = [
+        {
+          name = "myRule_3"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "formula_myRule_3"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          label = "Health has changed"
+        },
+      ]
+    },
+  ]
+  formulas = [
+    {
+      processMetadataValues = {
+        name = "originalFormula"
+        value = {
+          stringValue = "ISNEW() || ISchanged([Opportunity].Active_Opportunity__c )"
+        }
+      }
+      name = "formula_myRule_1"
+      dataType = "Boolean"
+      expression = "ISNEW() || ISchanged({!myVariable_current.Active_Opportunity__c} )"
+    },
+    {
+      processMetadataValues = {
+        name = "originalFormula"
+        value = {
+          stringValue = "ISchanged ([Opportunity].Health__c )"
+        }
+      }
+      name = "formula_myRule_3"
+      dataType = "Boolean"
+      expression = "ISchanged ({!myVariable_current.Health__c} )"
+    },
+  ]
+  interviewLabel = "Health_planning-1_InterviewLabel"
+  label = "Health planning"
+  processMetadataValues = [
+    {
+      name = "ObjectType"
+      value = {
+        stringValue = "Opportunity"
+      }
+    },
+    {
+      name = "ObjectVariable"
+      value = {
+        elementReference = "myVariable_current"
+      }
+    },
+    {
+      name = "OldObjectVariable"
+      value = {
+        elementReference = "myVariable_old"
+      }
+    },
+    {
+      name = "TriggerType"
+      value = {
+        stringValue = "onAllChanges"
+      }
+    },
+  ]
+  processType = "Workflow"
+  startElementReference = "myDecision"
+  status = "Draft"
+  variables = [
+    {
+      name = "myVariable_current"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Opportunity
+    },
+    {
+      name = "myVariable_old"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = salesforce.Opportunity
+    },
+  ]
+  _generated_dependencies = [
+    salesforce.Opportunity.field.Active_Opportunity__c,
+    salesforce.Opportunity.field.Health__c,
+  ]
+}

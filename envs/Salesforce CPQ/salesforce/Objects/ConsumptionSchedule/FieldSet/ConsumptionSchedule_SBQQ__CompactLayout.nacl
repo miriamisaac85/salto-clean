@@ -1,0 +1,45 @@
+salesforce.FieldSet ConsumptionSchedule_SBQQ__CompactLayout {
+  fullName = "ConsumptionSchedule.SBQQ__CompactLayout"
+  description = "Used on hover of a rate to display information about the Consumption Schedule"
+  displayedFields = [
+    {
+      field = "Description"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "BillingTerm"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "BillingTermUnit"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "Type"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "RatingMethod"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "UnitOfMeasure"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "MatchingAttribute"
+      isFieldManaged = false
+      isRequired = false
+    },
+  ]
+  label = "Compact Layout"
+  _parent = [
+    salesforce.ConsumptionSchedule,
+  ]
+}

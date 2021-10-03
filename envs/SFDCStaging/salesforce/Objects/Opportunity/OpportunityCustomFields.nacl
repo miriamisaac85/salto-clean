@@ -1,0 +1,163 @@
+type salesforce.Opportunity {
+  salesforce.Checkbox Budget_Confirmed__c {
+    apiName = "Opportunity.Budget_Confirmed__c"
+    label = "Budget Confirmed"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox Demo_Completed__c {
+    apiName = "Opportunity.Demo_Completed__c"
+    label = "Demo Completed"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Checkbox ROI_Analysis_Completed__c {
+    apiName = "Opportunity.ROI_Analysis_Completed__c"
+    label = "ROI Analysis Completed"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist Loss_Reason__c {
+    apiName = "Opportunity.Loss_Reason__c"
+    label = "Loss Reason"
+    valueSet = [
+      {
+        fullName = "Lost to Competitor"
+        default = false
+        label = "Lost to Competitor"
+      },
+      {
+        fullName = "No Budget / Lost Funding"
+        default = false
+        label = "No Budget / Lost Funding"
+      },
+      {
+        fullName = "No Decision / Non-Responsive"
+        default = false
+        label = "No Decision / Non-Responsive"
+      },
+      {
+        fullName = "Price"
+        default = false
+        label = "Price"
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.FormulaNumber Active_Opportunity__c {
+    apiName = "Opportunity.Active_Opportunity__c"
+    label = "Active Opportunity"
+    precision = 18
+    scale = 2
+    formula = "1+1"
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+  }
+  salesforce.FormulaText Health__c {
+    apiName = "Opportunity.Health__c"
+    label = "Health"
+    formula = "IF ( Probability >0.8,IF( Amount > 30000,IF( Passed_Security_Assessment__c  = true, \"Good\", \"Average\"), \"Average\"), \"Poor\")"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _generated_dependencies = [
+      salesforce.Opportunity.field.Passed_Security_Assessment__c,
+    ]
+  }
+  salesforce.Checkbox Passed_Security_Assessment__c {
+    apiName = "Opportunity.Passed_Security_Assessment__c"
+    label = "Passed Security Assessment"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Number Team_Size__c {
+    apiName = "Opportunity.Team_Size__c"
+    label = "Team Size"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+  }
+  salesforce.Picklist Tier__c {
+    apiName = "Opportunity.Tier__c"
+    label = "Tier"
+    valueSet = [
+      {
+        fullName = "1"
+        default = false
+        label = "Strategic Customer"
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "second"
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "third"
+      },
+      {
+        fullName = "4"
+        default = false
+        label = "Tech Touch"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+    trackTrending = false
+    sorted = false
+  }
+}

@@ -1,0 +1,12 @@
+salesforce.UserManagementSettings {
+  fullName = "UserManagement"
+  enableCanAnswerContainUsername = "true"
+  enableConcealPersonalInfo = "true"
+  enableEnhancedPermsetMgmt = false
+  enableEnhancedProfileMgmt = false
+  enableNewProfileUI = false
+  enableProfileFiltering = "false"
+  enableScrambleUserData = false
+  enableUserSelfDeactivate = false
+  restrictedProfileCloning = "false"
+}

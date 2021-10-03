@@ -1,0 +1,42 @@
+salesforce.ApprovalProcess SBQQ__PriceAction__c_Test_Price_Rule@uuuuvuu {
+  fullName = "SBQQ__PriceAction__c.Test_Price_Rule"
+  active = false
+  allowRecall = false
+  allowedSubmitters = {
+    type = "owner"
+  }
+  approvalPageFields = {
+    field = [
+      "Name",
+    ]
+  }
+  approvalStep = [
+    {
+      allowDelegate = false
+      assignedApprover = {
+        approver = {
+          name = "training+user1@salto.io"
+          type = "user"
+        }
+        whenMultipleApprovers = "FirstResponse"
+      }
+      label = "Step 1"
+      name = "Step_1"
+    },
+  ]
+  emailTemplate = "unfiled$public/LeadsWebtoLeademailresponseSAMPLE"
+  enableMobileDeviceAccess = false
+  entryCriteria = {
+    criteriaItems = {
+      field = "SBQQ__PriceAction__c.SBQQ__Value__c"
+      operation = "greaterThan"
+      value = "20000"
+    }
+  }
+  finalApprovalRecordLock = true
+  finalRejectionRecordLock = false
+  label = "Test Price Rule"
+  processOrder = 0
+  recordEditability = "AdminOnly"
+  showApprovalHistory = true
+}

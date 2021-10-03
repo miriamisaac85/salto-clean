@@ -1,0 +1,60 @@
+type salesforce.Lead {
+  salesforce.Picklist Disqualified_Reason__c {
+    apiName = "Lead.Disqualified_Reason__c"
+    label = "Disqualified Reason"
+    valueSet = [
+      {
+        fullName = "Not Interested"
+        default = false
+        label = "Not Interested"
+      },
+      {
+        fullName = "No Budget"
+        default = false
+        label = "No Budget"
+      },
+      {
+        fullName = "Wrong Usecase"
+        default = false
+        label = "Wrong Usecase"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    description = "Disqualification reason of the lead - must not be empty when lead is disqualified"
+    externalId = false
+    trackFeedHistory = false
+    sorted = false
+  }
+  salesforce.Url Alt_Domain__c {
+    apiName = "Lead.Alt_Domain__c"
+    label = "Alternative Domain"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+  }
+  salesforce.Url Domain__c {
+    apiName = "Lead.Domain__c"
+    label = "Domain"
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+  }
+  salesforce.Currency Budget__c {
+    apiName = "Lead.Budget__c"
+    label = "Budget_demo"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 18
+    queryable = true
+    externalId = false
+    trackFeedHistory = false
+  }
+}

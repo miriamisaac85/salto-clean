@@ -1,0 +1,15 @@
+salesforce.CustomApplication standard__OnlineSales {
+  fullName = "standard__OnlineSales"
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  label = "Online Sales"
+  navType = "Standard"
+  tabs = [
+    "standard-OnlineSalesHome",
+    salesforce.CustomTab.instance.SBQQ__BlockPrice__c,
+  ]
+  uiType = "Lightning"
+}

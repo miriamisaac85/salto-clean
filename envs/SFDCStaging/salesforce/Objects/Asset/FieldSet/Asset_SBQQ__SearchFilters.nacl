@@ -1,0 +1,107 @@
+salesforce.FieldSet Asset_SBQQ__SearchFilters {
+  fullName = "Asset.SBQQ__SearchFilters"
+  availableFields = [
+    {
+      field = "SBQQ__CreditProductId__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__CurrentSubscription__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__Dimension__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "InstallDate"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__LatestQuoteLine__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "PurchaseDate"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__QuoteLine__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__RenewalUpliftRate__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__RequiredByAsset__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__RequiredBySubscription__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__RevisedAsset__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__SegmentKey__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "Status"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__SubscriptionEndDate__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__SubscriptionQuoteLine__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__SubscriptionStartDate__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SBQQ__Subscription__c"
+      isFieldManaged = false
+      isRequired = false
+    },
+  ]
+  description = "Fields used as filters when searching for assets in Asset Lookup page."
+  displayedFields = [
+    {
+      field = "Name"
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = "SerialNumber"
+      isFieldManaged = false
+      isRequired = false
+    },
+  ]
+  label = "Search Filters"
+  _parent = [
+    salesforce.Asset,
+  ]
+}

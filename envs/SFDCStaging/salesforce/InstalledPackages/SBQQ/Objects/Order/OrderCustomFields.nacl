@@ -1,0 +1,149 @@
+type salesforce.Order {
+  salesforce.Checkbox SBQQ__Contracted__c {
+    apiName = "Order.SBQQ__Contracted__c"
+    label = "Contracted"
+    defaultValue = false
+    inlineHelpText = "Indicates if the order is contracted."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates if the order is contracted."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__ContractingMethod__c {
+    apiName = "Order.SBQQ__ContractingMethod__c"
+    label = "Contracting Method"
+    restricted = true
+    inlineHelpText = "\"By Subscription End Date\" creates a separate Contract for each unique Subscription End Date, containing only those Subscriptions. \"Single Contract\" creates one Contract containing all Subscriptions, regardless of their End Dates."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "\"By Subscription End Date\" creates a separate Contract for each unique Subscription End Date, containing only those Subscriptions. \"Single Contract\" creates one Contract containing all Subscriptions, regardless of their End Dates."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__ContractingMethod"
+  }
+  salesforce.Picklist SBQQ__PaymentTerm__c {
+    apiName = "Order.SBQQ__PaymentTerm__c"
+    label = "Payment Term"
+    restricted = true
+    inlineHelpText = "The payment term for this order."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The payment term for this order."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__PaymentTerm"
+  }
+  salesforce.Text SBQQ__PriceCalcStatusMessage__c {
+    apiName = "Order.SBQQ__PriceCalcStatusMessage__c"
+    label = "Price Calculation Status Message"
+    inlineHelpText = "The price calculation status message"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "The price calculation status message."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__PriceCalcStatus__c {
+    apiName = "Order.SBQQ__PriceCalcStatus__c"
+    label = "Price Calculation Status"
+    restricted = true
+    inlineHelpText = "Indicates the order price calculation job status.  It is set by the system."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The order price calculation  job status.  It is set by the system."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__JobStatus"
+  }
+  salesforce.Lookup SBQQ__Quote__c {
+    apiName = "Order.SBQQ__Quote__c"
+    label = "Quote"
+    referenceTo = [
+      "SBQQ__Quote__c",
+    ]
+    inlineHelpText = "The quote where the order is created from."
+    createable = true
+    updateable = true
+    relationshipName = "Orders"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The quote where the order is created from."
+    externalId = false
+    relationshipLabel = "Orders"
+    trackHistory = "false"
+  }
+  salesforce.Number SBQQ__RenewalTerm__c {
+    apiName = "Order.SBQQ__RenewalTerm__c"
+    label = "Renewal Term"
+    precision = 18
+    scale = 0
+    inlineHelpText = "Specify the term of the renewal. By default, it matches the original contract term."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Specify the term of the renewal. By default, it matches the original contract term."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Percent SBQQ__RenewalUpliftRate__c {
+    apiName = "Order.SBQQ__RenewalUpliftRate__c"
+    label = "Renewal Uplift (%)"
+    inlineHelpText = "Rate of renewal price increases."
+    createable = true
+    updateable = true
+    scale = 3
+    precision = 11
+    queryable = true
+    deprecated = false
+    description = "Rate of renewal price increases."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Summary SBQQ__OrderBookings__c {
+    apiName = "Order.SBQQ__OrderBookings__c"
+    label = "Order Bookings"
+    inlineHelpText = "Total amount of all order product bookings."
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    description = "Total amount of all order product bookings."
+    externalId = false
+    summarizedField = "OrderItem.SBQQ__OrderProductBookings__c"
+    summaryForeignKey = "OrderItem.OrderId"
+    summaryOperation = "sum"
+    trackHistory = "false"
+  }
+  salesforce.Summary SBQQ__TaxAmount__c {
+    apiName = "Order.SBQQ__TaxAmount__c"
+    label = "Estimated Tax"
+    inlineHelpText = "The estimated tax amount"
+    createable = false
+    updateable = false
+    queryable = true
+    deprecated = false
+    description = "The estimated tax amount"
+    externalId = false
+    summarizedField = "OrderItem.SBQQ__TaxAmount__c"
+    summaryForeignKey = "OrderItem.OrderId"
+    summaryOperation = "sum"
+    trackHistory = "false"
+  }
+}

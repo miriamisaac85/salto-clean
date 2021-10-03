@@ -1,0 +1,9 @@
+salesforce.Workflow Lead {
+  fullName = "Lead"
+  alerts = [
+    salesforce.WorkflowAlert.instance.Lead_Alert_in_3_days_old_lead_with_New_status@vuuuuuuuu,
+  ]
+  _parent = [
+    salesforce.Lead,
+  ]
+}

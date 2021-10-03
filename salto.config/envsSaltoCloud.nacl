@@ -1,4 +1,16 @@
 envs {
   envsCloud = [
+    {
+      uuid = "45b46acd-1b78-4c99-9f13-33500f78e1ce"
+      folderName = "dev1"
+    },
+    {
+      uuid = "79cc5ff2-df13-4f57-9947-28546b74e0f2"
+      folderName = "SFDCStaging"
+    },
+    {
+      uuid = "11a0cb10-0308-4b46-ad92-3ce252904b96"
+      folderName = "Salesforce CPQ"
+    },
   ]
 }

@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Opportunity_Update_Opportunity_tier_by_team_size@vuuuuu {
+  fullName = "Opportunity.Update_Opportunity_tier_by_team_size"
+  field = salesforce.Opportunity.field.Tier__c
+  literalValue = "1"
+  name = "Update Opportunity tier by team size"
+  notifyAssignee = false
+  operation = "Literal"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

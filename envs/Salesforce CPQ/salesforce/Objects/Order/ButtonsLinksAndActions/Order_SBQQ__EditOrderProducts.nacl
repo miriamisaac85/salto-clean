@@ -1,0 +1,14 @@
+salesforce.WebLink Order_SBQQ__EditOrderProducts {
+  fullName = "Order.SBQQ__EditOrderProducts"
+  availability = "online"
+  displayType = "button"
+  height = 600
+  linkType = "page"
+  masterLabel = "Edit Order Products"
+  openType = "noSidebar"
+  page = "SBQQ__OrderLineSelector"
+  protected = false
+  _parent = [
+    salesforce.Order,
+  ]
+}

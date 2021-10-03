@@ -1,0 +1,21 @@
+salesforce.WorkflowRule Opportunity_Assign_opportunity_to_tier@vsss {
+  fullName = "Opportunity.Assign opportunity to tier"
+  actions = [
+    {
+      name = salesforce.WorkflowFieldUpdate.instance.Opportunity_Update_Opportunity_tier_by_team_size@vuuuuu
+      type = "FieldUpdate"
+    },
+  ]
+  active = false
+  criteriaItems = [
+    {
+      field = salesforce.Opportunity.field.Team_Size__c
+      operation = "greaterOrEqual"
+      value = "10"
+    },
+  ]
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+}

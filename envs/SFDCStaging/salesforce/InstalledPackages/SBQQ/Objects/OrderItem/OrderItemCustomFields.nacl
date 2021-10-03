@@ -1,0 +1,714 @@
+type salesforce.OrderItem {
+  salesforce.Checkbox SBQQ__Activated__c {
+    apiName = "OrderItem.SBQQ__Activated__c"
+    label = "Activated"
+    defaultValue = false
+    inlineHelpText = "Indicates if the order product is activated."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates if the order product is activated."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__Asset__c {
+    apiName = "OrderItem.SBQQ__Asset__c"
+    label = "Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    inlineHelpText = "Asset created from this order product"
+    createable = true
+    updateable = true
+    relationshipName = "OrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Asset created from this order product"
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__BillingFrequency__c {
+    apiName = "OrderItem.SBQQ__BillingFrequency__c"
+    label = "Billing Frequency"
+    restricted = true
+    inlineHelpText = "Defines the billing frequency."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Defines the billing frequency."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__BillingFrequency"
+  }
+  salesforce.Picklist SBQQ__BillingType__c {
+    apiName = "OrderItem.SBQQ__BillingType__c"
+    label = "Billing Type"
+    restricted = true
+    inlineHelpText = "The billing type that defines when the billing occurs."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = '''
+The billing type that defines when the billing occurs. Billing in advance lets you bill your customers for products or services before you provide them; Billing in arrears lets
+            you bill your customers after the products or services are provided.
+'''
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__BillingType"
+  }
+  salesforce.Lookup SBQQ__BlockPrice__c {
+    apiName = "OrderItem.SBQQ__BlockPrice__c"
+    label = "Block Price"
+    referenceTo = [
+      "SBQQ__BlockPrice__c",
+    ]
+    inlineHelpText = "The block price that is applied to this order product at order creation time."
+    createable = true
+    updateable = true
+    relationshipName = "OrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The block price that is applied to this order product at order creation time."
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__BookingsIndicator__c {
+    apiName = "OrderItem.SBQQ__BookingsIndicator__c"
+    label = "Bookings Indicator"
+    restricted = true
+    inlineHelpText = "Indicates whether bookings are included."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates whether bookings are included."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__BookingsIndicator"
+  }
+  salesforce.Lookup SBQQ__BundleRoot__c {
+    apiName = "OrderItem.SBQQ__BundleRoot__c"
+    label = "Bundle Root"
+    referenceTo = [
+      salesforce.OrderItem,
+    ]
+    inlineHelpText = "An internally used field that points to the root of its bundle parent."
+    createable = true
+    updateable = true
+    relationshipName = "BundleChildren"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The root bundle parent Order Product of components. This component will be deleted if its bundle root is deleted."
+    externalId = false
+    relationshipLabel = "Order Products (Bundle Root)"
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__ChargeType__c {
+    apiName = "OrderItem.SBQQ__ChargeType__c"
+    label = "Charge Type"
+    restricted = true
+    inlineHelpText = "The type of the product charge."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The type of the product charge."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__ChargeType"
+  }
+  salesforce.Picklist SBQQ__ContractAction__c {
+    apiName = "OrderItem.SBQQ__ContractAction__c"
+    label = "Contract Action"
+    restricted = true
+    inlineHelpText = "The contract action where this order product is resulted from."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The contract action where this order product is resulted from."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__ContractAction"
+  }
+  salesforce.Lookup SBQQ__Contract__c {
+    apiName = "OrderItem.SBQQ__Contract__c"
+    label = "Contract"
+    referenceTo = [
+      salesforce.Contract,
+    ]
+    inlineHelpText = "The contract of the subscription that is created from this order product."
+    createable = true
+    updateable = true
+    relationshipName = "OrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The contract of the subscription that is created from this order product."
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Checkbox SBQQ__Contracted__c {
+    apiName = "OrderItem.SBQQ__Contracted__c"
+    label = "Contracted"
+    defaultValue = false
+    inlineHelpText = "Indicates if the order product is contracted."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates if the order product is contracted."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__ContractingMethod__c {
+    apiName = "OrderItem.SBQQ__ContractingMethod__c"
+    label = "Contracting Method"
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Contract Separately"
+        default = false
+        label = "Contract Separately"
+      },
+      {
+        fullName = "Do Not Contract"
+        default = false
+        label = "Do Not Contract"
+      },
+    ]
+    restricted = true
+    inlineHelpText = "Controls the contracting behavior of an Order Product."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = '''
+Controls the contracting behavior of an Order Product. "Inherit" uses the behavior of the parent Order. "Contract Separately" generates a separate Contract for
+            the Order Product. "No Contract" skips the Order Product altogether during the contracting process.
+'''
+    externalId = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Number SBQQ__DefaultSubscriptionTerm__c {
+    apiName = "OrderItem.SBQQ__DefaultSubscriptionTerm__c"
+    label = "Default Subscription Term"
+    precision = 5
+    scale = 0
+    inlineHelpText = '''
+Term length of the subscription, which only applies if the product is a subscription. It is copied from the Subscription Term of the related product when the line item is first
+            generated.
+'''
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = '''
+Term length of the subscription, which only applies if the product is a subscription. It is copied from the Subscription Term of the related product when the line item is first
+            generated.
+'''
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__DimensionType__c {
+    apiName = "OrderItem.SBQQ__DimensionType__c"
+    label = "Segment Type"
+    inlineHelpText = "For multi-segmented Products, this is the type of price dimeension (e.g. \"YEAR\", \"MONTH\", \"QUARTER\") of the order item."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 8
+    queryable = true
+    deprecated = false
+    description = "For multi-segmented Products, this is the type of price dimeension (e.g. \"YEAR\", \"MONTH\", \"QUARTER\") of the order item."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__DiscountSchedule__c {
+    apiName = "OrderItem.SBQQ__DiscountSchedule__c"
+    label = "Discount Schedule"
+    referenceTo = [
+      "SBQQ__DiscountSchedule__c",
+    ]
+    inlineHelpText = "Discount schedule applied to this order product."
+    createable = true
+    updateable = true
+    relationshipName = "OrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Discount schedule applied to this order product."
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.FormulaCurrency SBQQ__OrderProductBookings__c {
+    apiName = "OrderItem.SBQQ__OrderProductBookings__c"
+    label = "Order Product Bookings"
+    formula = "IF( ISPICKVAL(SBQQ__BookingsIndicator__c  , 'Include') , UnitPrice * Quantity , 0)"
+    inlineHelpText = "Amount of the order product’s total price."
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Amount of the order product’s total price."
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = "false"
+  }
+  salesforce.Number SBQQ__OrderedQuantity__c {
+    apiName = "OrderItem.SBQQ__OrderedQuantity__c"
+    label = "Ordered Quantity"
+    precision = 18
+    scale = 2
+    inlineHelpText = "The actual quantity of the product placed in the order."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "The actual quantity of the product placed in the order."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__PriceDimension__c {
+    apiName = "OrderItem.SBQQ__PriceDimension__c"
+    label = "Price Dimension"
+    referenceTo = [
+      "SBQQ__Dimension__c",
+    ]
+    inlineHelpText = "References the price dimension applied to this order product."
+    createable = true
+    updateable = true
+    relationshipName = "OrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "References the price dimension applied to this order product."
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__PriceSchedule__c {
+    apiName = "OrderItem.SBQQ__PriceSchedule__c"
+    label = "Price Schedule"
+    referenceTo = [
+      "SBQQ__PriceSchedule__c",
+    ]
+    inlineHelpText = "Price schedule applied to this order product."
+    createable = true
+    updateable = true
+    relationshipName = "OrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Price schedule applied to this order product."
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__PricingMethod__c {
+    apiName = "OrderItem.SBQQ__PricingMethod__c"
+    label = "Pricing Method"
+    valueSet = [
+      {
+        fullName = "List"
+        default = true
+        label = "List"
+      },
+      {
+        fullName = "Cost"
+        default = false
+        label = "Cost"
+      },
+      {
+        fullName = "Block"
+        default = false
+        label = "Block"
+      },
+      {
+        fullName = "Percent Of Total"
+        default = false
+        label = "Percent Of Total"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+    ]
+    restricted = false
+    inlineHelpText = "Indicates how the price for this line item is calculated. \"List\" = subtracting discount from list price. \"Cost\" = adding markup to cost."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Determines how the price for this line item is set. \"List\" = calculated by subtracting discount from list price. \"Cost\"  = calculated by adding markup to cost."
+    externalId = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Picklist SBQQ__ProductSubscriptionType__c {
+    apiName = "OrderItem.SBQQ__ProductSubscriptionType__c"
+    label = "Product Subscription Type"
+    restricted = true
+    inlineHelpText = "Set the order item's product subscription type."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Set the order item's product subscription type."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__SubscriptionType"
+  }
+  salesforce.Number SBQQ__ProrateMultiplier__c {
+    apiName = "OrderItem.SBQQ__ProrateMultiplier__c"
+    label = "Prorate Multiplier"
+    precision = 8
+    scale = 4
+    inlineHelpText = "Calculated ratio used to compute Prorated Price."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "Calculated ratio used to compute Prorated Price."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__QuoteLine__c {
+    apiName = "OrderItem.SBQQ__QuoteLine__c"
+    label = "Quote Line"
+    referenceTo = [
+      "SBQQ__QuoteLine__c",
+    ]
+    inlineHelpText = "The quote line where this order product is created from."
+    createable = true
+    updateable = true
+    relationshipName = "OrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "The quote line where this order product is created from."
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Currency SBQQ__QuotedListPrice__c {
+    apiName = "OrderItem.SBQQ__QuotedListPrice__c"
+    label = "Quoted List Price"
+    inlineHelpText = "List unit price for the product quoted by this line item. List Price originates from the price book."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 14
+    queryable = true
+    deprecated = false
+    description = "List unit price for the product quoted by this line item. List Price originates from the price book."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Number SBQQ__QuotedQuantity__c {
+    apiName = "OrderItem.SBQQ__QuotedQuantity__c"
+    label = "Quoted Quantity"
+    precision = 12
+    scale = 2
+    inlineHelpText = "The quoted quantity."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "The quoted quantity."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__RequiredBy__c {
+    apiName = "OrderItem.SBQQ__RequiredBy__c"
+    label = "Required By"
+    referenceTo = [
+      salesforce.OrderItem,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Components"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__RevisedOrderProduct__c {
+    apiName = "OrderItem.SBQQ__RevisedOrderProduct__c"
+    label = "Revised Order Product"
+    referenceTo = [
+      salesforce.OrderItem,
+    ]
+    inlineHelpText = "References the order product that this order product revises."
+    createable = true
+    updateable = true
+    relationshipName = "RevisingOrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "References the order product that this order product revises."
+    externalId = false
+    relationshipLabel = "Order Products (Revised Order Product)"
+    trackHistory = "false"
+  }
+  salesforce.Number SBQQ__SegmentIndex__c {
+    apiName = "OrderItem.SBQQ__SegmentIndex__c"
+    label = "Segment Index"
+    precision = 2
+    scale = 0
+    inlineHelpText = "For multi-segmented products, Index representing this order product's position in the segment table."
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    description = "For multi-segmented products, Index representing this order product's position in the segment table."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__SegmentKey__c {
+    apiName = "OrderItem.SBQQ__SegmentKey__c"
+    label = "Segment Key"
+    inlineHelpText = "For multi-segmented Products, this is a shared key used to group multi-dimensional Quote Lines together."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 30
+    queryable = true
+    deprecated = false
+    description = "For multi-segmented Products, this is a shared key used to group multi-dimensional Quote Lines together."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__ShippingAccount__c {
+    apiName = "OrderItem.SBQQ__ShippingAccount__c"
+    label = "Shipping Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "ShippingAccountOrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__Status__c {
+    apiName = "OrderItem.SBQQ__Status__c"
+    label = "Activation Status"
+    restricted = true
+    inlineHelpText = "Indicates the current state of the order product. It is defaulted to Draft when an order is created."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "The current state of the order product."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__OrderProductStatus"
+  }
+  salesforce.Picklist SBQQ__SubscriptionPricing__c {
+    apiName = "OrderItem.SBQQ__SubscriptionPricing__c"
+    label = "Subscription Pricing"
+    restricted = true
+    inlineHelpText = "Indicates how the subscription price is calculated. If this is blank, the line items is not a subscription product."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Method of calculating the subscription price. A blank value indicates that the line item isn't a subscription product."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__SubscriptionPricing"
+  }
+  salesforce.Number SBQQ__SubscriptionTerm__c {
+    apiName = "OrderItem.SBQQ__SubscriptionTerm__c"
+    label = "Subscription Term"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    deprecated = false
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Picklist SBQQ__SubscriptionType__c {
+    apiName = "OrderItem.SBQQ__SubscriptionType__c"
+    label = "Subscription Type"
+    restricted = true
+    inlineHelpText = "Indicates the subscription type to determine contract's pricing."
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Indicates the subscription type to determine contract's pricing."
+    externalId = false
+    trackHistory = "false"
+    valueSetName = "SBQQ__SubscriptionType"
+    fieldDependency = {
+      controllingField = "SBQQ__ProductSubscriptionType__c"
+      valueSettings = [
+        {
+          valueName = "Renewable"
+          controllingFieldValue = [
+            "Renewable",
+            "Renewable/Evergreen",
+          ]
+        },
+        {
+          valueName = "One-time"
+          controllingFieldValue = [
+            "One-time",
+          ]
+        },
+        {
+          valueName = "Evergreen"
+          controllingFieldValue = [
+            "Renewable/Evergreen",
+            "Evergreen",
+          ]
+        },
+      ]
+    }
+  }
+  salesforce.Lookup SBQQ__Subscription__c {
+    apiName = "OrderItem.SBQQ__Subscription__c"
+    label = "Subscription"
+    referenceTo = [
+      "SBQQ__Subscription__c",
+    ]
+    inlineHelpText = "Subscription created from this order product"
+    createable = true
+    updateable = true
+    relationshipName = "SubscriptionOrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Subscription created from this order product"
+    externalId = false
+    relationshipLabel = "Order Products"
+    trackHistory = "false"
+  }
+  salesforce.Currency SBQQ__TaxAmount__c {
+    apiName = "OrderItem.SBQQ__TaxAmount__c"
+    label = "Estimated Tax"
+    inlineHelpText = "Estimated tax amount"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+    deprecated = false
+    description = "Estimated tax amount"
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Text SBQQ__TaxCode__c {
+    apiName = "OrderItem.SBQQ__TaxCode__c"
+    label = "Tax code"
+    inlineHelpText = "Specifies the tax code for taxation rules."
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+    deprecated = false
+    description = "Specifies the tax code for taxation rules."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__TermDiscountSchedule__c {
+    apiName = "OrderItem.SBQQ__TermDiscountSchedule__c"
+    label = "Term Discount Schedule"
+    referenceTo = [
+      "SBQQ__DiscountSchedule__c",
+    ]
+    inlineHelpText = "Term Discount Schedule applied to this order product."
+    createable = true
+    updateable = true
+    relationshipName = "TermedOrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Term Discount Schedule applied to this order product."
+    externalId = false
+    relationshipLabel = "Order Products (Term Discount Schedule)"
+    trackHistory = "false"
+  }
+  salesforce.Date SBQQ__TerminatedDate__c {
+    apiName = "OrderItem.SBQQ__TerminatedDate__c"
+    label = "Terminated Date"
+    inlineHelpText = "Date that this order product's related subscription was terminated"
+    createable = true
+    updateable = true
+    queryable = true
+    deprecated = false
+    description = "Date that this order product's related subscription was terminated"
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Currency SBQQ__UnproratedNetPrice__c {
+    apiName = "OrderItem.SBQQ__UnproratedNetPrice__c"
+    label = "Full-Term Net Unit Price"
+    inlineHelpText = "The full term net price for individual line."
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 16
+    queryable = true
+    deprecated = false
+    description = "The full-term Net Unit Price."
+    externalId = false
+    trackHistory = "false"
+  }
+  salesforce.Lookup SBQQ__UpgradedSubscription__c {
+    apiName = "OrderItem.SBQQ__UpgradedSubscription__c"
+    label = "Upgraded Subscription"
+    referenceTo = [
+      "SBQQ__Subscription__c",
+    ]
+    inlineHelpText = "Subscription being upgraded by this quote line. When the quote is contracted this subscription will have its Terminated Date field populated."
+    createable = true
+    updateable = true
+    relationshipName = "OrderProducts"
+    queryable = true
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Subscription being upgraded by this quote line."
+    externalId = false
+    relationshipLabel = "Upgraded Order Products"
+    trackHistory = "false"
+  }
+}

@@ -1,0 +1,64 @@
+type salesforce.Product2 {
+  salesforce.Picklist Subscription_License_Type__c {
+    apiName = "Product2.Subscription_License_Type__c"
+    label = "Subscription License Type"
+    valueSet = [
+      {
+        fullName = "Pre Paid"
+        default = false
+        label = "Pre Paid"
+      },
+      {
+        fullName = "Pay as you go"
+        default = false
+        label = "Pay as you go"
+      },
+      {
+        fullName = "Pre-Paid Overage Use"
+        default = false
+        label = "Pre-Paid Overage Use"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.Picklist License_Type__c {
+    apiName = "Product2.License_Type__c"
+    label = "License Type"
+    valueSet = [
+      {
+        fullName = "Perpetual"
+        default = false
+        label = "Perpetual"
+      },
+      {
+        fullName = "Subscription"
+        default = false
+        label = "Subscription"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    externalId = false
+    trackHistory = "false"
+    sorted = false
+  }
+  salesforce.FormulaDate Product_End_Date_Demo__c {
+    apiName = "Product2.Product_End_Date_Demo__c"
+    label = "Product End Date Demo"
+    formula = "CreatedDate + 30"
+    createable = false
+    updateable = false
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackHistory = "false"
+  }
+}

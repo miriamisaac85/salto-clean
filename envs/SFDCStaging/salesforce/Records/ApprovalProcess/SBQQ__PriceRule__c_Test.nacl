@@ -1,0 +1,44 @@
+salesforce.ApprovalProcess SBQQ__PriceRule__c_Test@uuuuv {
+  fullName = "SBQQ__PriceRule__c.Test"
+  active = false
+  allowRecall = false
+  allowedSubmitters = {
+    type = "owner"
+  }
+  approvalPageFields = {
+    field = [
+      "Name",
+      "Owner",
+    ]
+  }
+  approvalStep = [
+    {
+      allowDelegate = false
+      assignedApprover = {
+        approver = {
+          type = "adhoc"
+        }
+      }
+      label = "Step 1"
+      name = "Step_1"
+    },
+  ]
+  enableMobileDeviceAccess = false
+  entryCriteria = {
+    criteriaItems = {
+      field = "SBQQ__PriceRule__c.SBQQ__Active__c"
+      operation = "equals"
+      value = "True"
+    }
+  }
+  finalApprovalRecordLock = true
+  finalRejectionRecordLock = false
+  label = "Test"
+  nextAutomatedApprover = {
+    useApproverFieldOfRecordOwner = false
+    userHierarchyField = "Manager"
+  }
+  processOrder = 0
+  recordEditability = "AdminOnly"
+  showApprovalHistory = true
+}

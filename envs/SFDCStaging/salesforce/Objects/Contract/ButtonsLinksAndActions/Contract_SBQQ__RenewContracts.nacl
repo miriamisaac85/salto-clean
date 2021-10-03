@@ -1,0 +1,15 @@
+salesforce.WebLink Contract_SBQQ__RenewContracts {
+  fullName = "Contract.SBQQ__RenewContracts"
+  availability = "online"
+  displayType = "massActionButton"
+  height = 0
+  linkType = "page"
+  masterLabel = "Renew Contracts"
+  openType = "sidebar"
+  page = "SBQQ__RenewContracts"
+  protected = false
+  requireRowSelection = true
+  _parent = [
+    salesforce.Contract,
+  ]
+}

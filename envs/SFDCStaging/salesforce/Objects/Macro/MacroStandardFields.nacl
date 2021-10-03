@@ -1,0 +1,810 @@
+type salesforce.Macro {
+  serviceid Id {
+    apiName = "Macro.Id"
+    label = "Macro ID"
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Macro.OwnerId"
+    label = "Owner ID"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Owner"
+    queryable = true
+    _hidden_value = true
+    trackHistory = "false"
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Macro.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Macro.Name"
+    label = "Macro Name"
+    _required = true
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 255
+    queryable = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Macro.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Macro.CreatedById"
+    label = "Created By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Macro.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Macro.LastModifiedById"
+    label = "Last Modified By ID"
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Macro.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Html Description {
+    apiName = "Macro.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    length = 4096
+    queryable = true
+  }
+  salesforce.Checkbox IsAlohaSupported {
+    apiName = "Macro.IsAlohaSupported"
+    label = "Supports Classic"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox IsLightningSupported {
+    apiName = "Macro.IsLightningSupported"
+    label = "Supports Lightning"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist StartingContext {
+    apiName = "Macro.StartingContext"
+    label = "Apply To"
+    valueSet = [
+      {
+        fullName = "Account"
+        default = false
+        label = "Account"
+        isActive = true
+      },
+      {
+        fullName = "AccountContactRelation"
+        default = false
+        label = "Account Contact Relationship"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__RelatedContent__c"
+        default = false
+        label = "Additional Document"
+        isActive = true
+      },
+      {
+        fullName = "Asset"
+        default = false
+        label = "Asset"
+        isActive = true
+      },
+      {
+        fullName = "AssetRelationship"
+        default = false
+        label = "Asset Relationship"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProductAttribute__c"
+        default = false
+        label = "Attribute Item"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__AttributeSet__c"
+        default = false
+        label = "Attribute Set"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__AttributeValue__c"
+        default = false
+        label = "Attribute Value"
+        isActive = true
+      },
+      {
+        fullName = "AuthorizationFormText"
+        default = false
+        label = "Authorization Form Text"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__BlockPrice__c"
+        default = false
+        label = "Block Price"
+        isActive = true
+      },
+      {
+        fullName = "Case"
+        default = false
+        label = "Case"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ColumnMetadata__c"
+        default = false
+        label = "Column Metadata"
+        isActive = true
+      },
+      {
+        fullName = "CommSubscription"
+        default = false
+        label = "Communication Subscription"
+        isActive = true
+      },
+      {
+        fullName = "CommSubscriptionChannelType"
+        default = false
+        label = "Communication Subscription Channel Type"
+        isActive = true
+      },
+      {
+        fullName = "CommSubscriptionConsent"
+        default = false
+        label = "Communication Subscription Consent"
+        isActive = true
+      },
+      {
+        fullName = "CommSubscriptionTiming"
+        default = false
+        label = "Communication Subscription Timing"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ConfigurationAttribute__c"
+        default = false
+        label = "Configuration Attribute"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ConfigurationRule__c"
+        default = false
+        label = "Configuration Rule"
+        isActive = true
+      },
+      {
+        fullName = "ConsumptionSchedule"
+        default = false
+        label = "Consumption Schedule"
+        isActive = true
+      },
+      {
+        fullName = "Contact"
+        default = false
+        label = "Contact"
+        isActive = true
+      },
+      {
+        fullName = "ContactPointAddress"
+        default = false
+        label = "Contact Point Address"
+        isActive = true
+      },
+      {
+        fullName = "ContactPointEmail"
+        default = false
+        label = "Contact Point Email"
+        isActive = true
+      },
+      {
+        fullName = "ContactPointPhone"
+        default = false
+        label = "Contact Point Phone"
+        isActive = true
+      },
+      {
+        fullName = "Contract"
+        default = false
+        label = "Contract"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ContractedPrice__c"
+        default = false
+        label = "Contracted Price"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__Cost__c"
+        default = false
+        label = "Cost"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__CustomAction__c"
+        default = false
+        label = "Custom Action"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__CustomActionCondition__c"
+        default = false
+        label = "Custom Action Condition"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__CustomScript__c"
+        default = false
+        label = "Custom Script"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__DiscountCategory__c"
+        default = false
+        label = "Discount Category"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__DiscountSchedule__c"
+        default = false
+        label = "Discount Schedule"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__DiscountTier__c"
+        default = false
+        label = "Discount Tier"
+        isActive = true
+      },
+      {
+        fullName = "EngagementChannelType"
+        default = false
+        label = "Engagement Channel Type"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ErrorCondition__c"
+        default = false
+        label = "Error Condition"
+        isActive = true
+      },
+      {
+        fullName = "Event"
+        default = false
+        label = "Event"
+        isActive = true
+      },
+      {
+        fullName = "Product2__x"
+        default = false
+        label = "ExternalProduct"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__Favorite__c"
+        default = false
+        label = "Favorite"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__FavoriteProduct__c"
+        default = false
+        label = "Favorite Product"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__FavoriteShare__c"
+        default = false
+        label = "Favorite Share"
+        isActive = true
+      },
+      {
+        fullName = "FeedItem"
+        default = false
+        label = "Feed Item"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__FieldSetMetadata__c"
+        default = false
+        label = "FieldSet Metadata"
+        isActive = true
+      },
+      {
+        fullName = "CollaborationGroup"
+        default = false
+        label = "Group"
+        isActive = true
+      },
+      {
+        fullName = "Image"
+        default = false
+        label = "Image"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ImportColumn__c"
+        default = false
+        label = "Import Column"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ImportFormat__c"
+        default = false
+        label = "Import Format"
+        isActive = true
+      },
+      {
+        fullName = "Individual"
+        default = false
+        label = "Individual"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__InstallProcessorLog__c"
+        default = false
+        label = "Install Processor Log"
+        isActive = true
+      },
+      {
+        fullName = "Lead"
+        default = false
+        label = "Lead"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__LineColumn__c"
+        default = false
+        label = "Line Column"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__Localization__c"
+        default = false
+        label = "Localization"
+        isActive = true
+      },
+      {
+        fullName = "Location"
+        default = false
+        label = "Location"
+        isActive = true
+      },
+      {
+        fullName = "LocationTrustMeasure"
+        default = false
+        label = "Location Trust Measure"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__LookupData__c"
+        default = false
+        label = "Lookup Data"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__LookupQuery__c"
+        default = false
+        label = "Lookup Query"
+        isActive = true
+      },
+      {
+        fullName = "Opportunity"
+        default = false
+        label = "Opportunity"
+        isActive = true
+      },
+      {
+        fullName = "OpportunityContactRole"
+        default = false
+        label = "Opportunity Contact Role"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__OptionConstraint__c"
+        default = false
+        label = "Option Constraint"
+        isActive = true
+      },
+      {
+        fullName = "Order"
+        default = false
+        label = "Order"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__OrderItemConsumptionRate__c"
+        default = false
+        label = "Order Product Consumption Rate"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__OrderItemConsumptionSchedule__c"
+        default = false
+        label = "Order Product Consumption Schedule"
+        isActive = true
+      },
+      {
+        fullName = "PartyConsent"
+        default = false
+        label = "Party Consent"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__PriceAction__c"
+        default = false
+        label = "Price Action"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__PriceCondition__c"
+        default = false
+        label = "Price Condition"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__Dimension__c"
+        default = false
+        label = "Price Dimension"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__PriceRule__c"
+        default = false
+        label = "Price Rule"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__PriceSchedule__c"
+        default = false
+        label = "Price Schedule"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__PriceTier__c"
+        default = false
+        label = "Price Tier"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__PricingGuidance__c"
+        default = false
+        label = "Pricing Guidance"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__PricingGuidanceTier__c"
+        default = false
+        label = "Pricing Guidance Tier"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProcessInput__c"
+        default = false
+        label = "Process Input"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProcessInputCondition__c"
+        default = false
+        label = "Process Input Condition"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProcessInputValue__c"
+        default = false
+        label = "Process Input Values"
+        isActive = true
+      },
+      {
+        fullName = "Product2"
+        default = false
+        label = "Product"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProductAction__c"
+        default = false
+        label = "Product Action"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProductAttributeSet__c"
+        default = false
+        label = "Product Attribute Set"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProductFeature__c"
+        default = false
+        label = "Product Feature"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProductOption__c"
+        default = false
+        label = "Product Option"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__ProductRule__c"
+        default = false
+        label = "Product Rule"
+        isActive = true
+      },
+      {
+        fullName = "ContentDocumentListViewMapping"
+        default = false
+        label = "Quip Document from List View"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__Quote__c"
+        default = false
+        label = "Quote"
+        isActive = true
+      },
+      {
+        fullName = "Quote"
+        default = false
+        label = "Quote"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteDocument__c"
+        default = false
+        label = "Quote Document"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteLine__c"
+        default = false
+        label = "Quote Line"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteLineConsumptionRate__c"
+        default = false
+        label = "Quote Line Consumption Rate"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteLineConsumptionSchedule__c"
+        default = false
+        label = "Quote Line Consumption Schedule"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteLineGroup__c"
+        default = false
+        label = "Quote Line Group"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteLinePricingGuidance__c"
+        default = false
+        label = "Quote Line Pricing Guidance"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteProcess__c"
+        default = false
+        label = "Quote Process"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteTemplate__c"
+        default = false
+        label = "Quote Template"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__QuoteTerm__c"
+        default = false
+        label = "Quote Term"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__RecordJob__c"
+        default = false
+        label = "Record Job"
+        isActive = true
+      },
+      {
+        fullName = "SaltoData__c"
+        default = false
+        label = "SaltoData"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__SearchFilter__c"
+        default = false
+        label = "Search Filter"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__SearchIndex__c"
+        default = false
+        label = "Search Index"
+        isActive = true
+      },
+      {
+        fullName = "SocialPost"
+        default = false
+        label = "Social Post"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__SolutionGroup__c"
+        default = false
+        label = "Solution Group"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__SubscribedAsset__c"
+        default = false
+        label = "Subscribed Asset"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__SubscribedQuoteLine__c"
+        default = false
+        label = "Subscribed Quote Line"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__Subscription__c"
+        default = false
+        label = "Subscription"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__SubscriptionConsumptionRate__c"
+        default = false
+        label = "Subscription Consumption Rate"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__SubscriptionConsumptionSchedule__c"
+        default = false
+        label = "Subscription Consumption Schedule"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__SummaryVariable__c"
+        default = false
+        label = "Summary Variable"
+        isActive = true
+      },
+      {
+        fullName = "Task"
+        default = false
+        label = "Task"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__TaxExemptionCertificate__c"
+        default = false
+        label = "Tax Exemption Certificate"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__TemplateContent__c"
+        default = false
+        label = "Template Content"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__TemplateSection__c"
+        default = false
+        label = "Template Section"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__TermCondition__c"
+        default = false
+        label = "Term Condition"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__Theme__c"
+        default = false
+        label = "Theme"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__TimingLog__c"
+        default = false
+        label = "Timing Log"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__UpgradeSource__c"
+        default = false
+        label = "Upgrade Source"
+        isActive = true
+      },
+      {
+        fullName = "User"
+        default = false
+        label = "User"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__WebQuote__c"
+        default = false
+        label = "Web Quote"
+        isActive = true
+      },
+      {
+        fullName = "SBQQ__WebQuoteLine__c"
+        default = false
+        label = "Web Quote Line"
+        isActive = true
+      },
+      {
+        fullName = "Yariv__c"
+        default = false
+        label = "Yariv"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

@@ -1,0 +1,185 @@
+salesforce.Flow Account_Netsuite_city_update_triggers_approval_process {
+  fullName = "Account_Netsuite_city_update_triggers_approval_process"
+  actionCalls = {
+    processMetadataValues = [
+      {
+        name = "selectionType"
+        value = {
+          stringValue = "firstFound"
+        }
+      },
+      {
+        name = "submitterType"
+        value = {
+          stringValue = "currentUser"
+        }
+      },
+    ]
+    name = "myRule_1_A1"
+    label = "Submit for approval"
+    locationX = 100
+    locationY = 200
+    actionName = "submit"
+    actionType = "submit"
+    inputParameters = [
+      {
+        name = "objectId"
+        value = {
+          elementReference = "myVariable_current.Id"
+        }
+      },
+      {
+        name = "comment"
+      },
+    ]
+  }
+  apiVersion = 51
+  decisions = [
+    {
+      name = "isChangedDecision2_myRule_1_Netsuite_city_c"
+      label = "isChangedDecision2_myRule_1_Netsuite_city_c"
+      locationX = 0
+      locationY = 0
+      defaultConnector = {
+        targetReference = "myDecision"
+      }
+      defaultConnectorLabel = "default"
+      rules = [
+        {
+          name = "isChangedRule_2_myRule_1_Netsuite_city_c"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "myVariable_old"
+              operator = "IsNull"
+              rightValue = {
+                booleanValue = false
+              }
+            },
+            {
+              leftValueReference = "myVariable_old.Netsuite_city__c"
+              operator = "NotEqualTo"
+              rightValue = {
+                elementReference = "myVariable_current.Netsuite_city__c"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "myDecision"
+          }
+          label = "isChangedRule_2_myRule_1_Netsuite_city_c"
+        },
+      ]
+    },
+    {
+      processMetadataValues = {
+        name = "index"
+        value = {
+          numberValue = 0
+        }
+      }
+      name = "myDecision"
+      label = "myDecision"
+      locationX = 50
+      locationY = 0
+      defaultConnectorLabel = "default"
+      rules = [
+        {
+          name = "myRule_1"
+          conditionLogic = "and"
+          conditions = [
+            {
+              processMetadataValues = [
+                {
+                  name = "inputDataType"
+                  value = {
+                    stringValue = "Boolean"
+                  }
+                },
+                {
+                  name = "leftHandSideType"
+                  value = {
+                    stringValue = "String"
+                  }
+                },
+                {
+                  name = "operatorDataType"
+                  value = {
+                    stringValue = "String"
+                  }
+                },
+                {
+                  name = "rightHandSideType"
+                  value = {
+                    stringValue = "Boolean"
+                  }
+                },
+              ]
+              leftValueReference = "isChangedRule_2_myRule_1_Netsuite_city_c"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          connector = {
+            targetReference = "myRule_1_A1"
+          }
+          label = "Netsuite city changed"
+        },
+      ]
+    },
+  ]
+  interviewLabel = "Account_Netsuite_city_update_triggers_approval_process-1_InterviewLabel"
+  label = "Account Netsuite city update triggers approval process"
+  processMetadataValues = [
+    {
+      name = "ObjectType"
+      value = {
+        stringValue = "Account"
+      }
+    },
+    {
+      name = "ObjectVariable"
+      value = {
+        elementReference = "myVariable_current"
+      }
+    },
+    {
+      name = "OldObjectVariable"
+      value = {
+        elementReference = "myVariable_old"
+      }
+    },
+    {
+      name = "TriggerType"
+      value = {
+        stringValue = "onAllChanges"
+      }
+    },
+  ]
+  processType = "Workflow"
+  startElementReference = "isChangedDecision2_myRule_1_Netsuite_city_c"
+  status = "Draft"
+  variables = [
+    {
+      name = "myVariable_current"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+    {
+      name = "myVariable_old"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = salesforce.Account
+    },
+  ]
+  _generated_dependencies = [
+    salesforce.Account.field.Netsuite_city__c,
+  ]
+}

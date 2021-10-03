@@ -1,0 +1,14 @@
+salesforce.WebLink Account_SBQQ__Amend_Assets {
+  fullName = "Account.SBQQ__Amend_Assets"
+  availability = "online"
+  displayType = "button"
+  height = 600
+  linkType = "page"
+  masterLabel = "Amend Assets"
+  openType = "sidebar"
+  page = "SBQQ__AssetSelectorAmend"
+  protected = false
+  _parent = [
+    salesforce.Account,
+  ]
+}

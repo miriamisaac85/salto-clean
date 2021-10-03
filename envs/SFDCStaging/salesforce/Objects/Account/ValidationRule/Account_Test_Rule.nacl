@@ -1,0 +1,10 @@
+salesforce.ValidationRule Account_Test_Rule {
+  fullName = "Account.Test_Rule"
+  active = true
+  description = "test tracker"
+  errorConditionFormula = "AnnualRevenue  > 50"
+  errorMessage = "Check the Annual revenue"
+  _parent = [
+    salesforce.Account,
+  ]
+}
