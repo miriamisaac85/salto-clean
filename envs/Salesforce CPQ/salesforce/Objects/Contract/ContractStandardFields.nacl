@@ -93,6 +93,7 @@ type salesforce.Contract {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Address BillingAddress {
     apiName = "Contract.BillingAddress"
@@ -100,6 +101,7 @@ type salesforce.Contract {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Address ShippingAddress {
     apiName = "Contract.ShippingAddress"
@@ -107,6 +109,7 @@ type salesforce.Contract {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number ContractTerm {
     apiName = "Contract.ContractTerm"
@@ -262,6 +265,7 @@ type salesforce.Contract {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "Contract.Description"
@@ -294,6 +298,7 @@ type salesforce.Contract {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Contract.CreatedDate"
@@ -358,5 +363,6 @@ type salesforce.Contract {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

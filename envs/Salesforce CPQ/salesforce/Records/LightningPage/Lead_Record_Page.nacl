@@ -208,4 +208,7 @@ salesforce.LightningPage Lead_Record_Page {
     name = "flexipage:recordHomeWithSubheaderTemplateDesktop"
   }
   type = "RecordPage"
+  _parent = [
+    salesforce.Lead,
+  ]
 }

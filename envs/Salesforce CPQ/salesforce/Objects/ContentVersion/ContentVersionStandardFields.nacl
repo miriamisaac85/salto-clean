@@ -25,6 +25,7 @@ type salesforce.ContentVersion {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Url ContentUrl {
     apiName = "ContentVersion.ContentUrl"
@@ -53,6 +54,7 @@ type salesforce.ContentVersion {
     caseSensitive = false
     length = 20
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text Title {
     apiName = "ContentVersion.Title"
@@ -148,6 +150,7 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ContentVersion.IsDeleted"
@@ -175,6 +178,7 @@ type salesforce.ContentVersion {
     updateable = false
     relationshipName = "ContentModifiedBy"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number PositiveRatingCount {
     apiName = "ContentVersion.PositiveRatingCount"
@@ -185,6 +189,7 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number NegativeRatingCount {
     apiName = "ContentVersion.NegativeRatingCount"
@@ -195,6 +200,7 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number FeaturedContentBoost {
     apiName = "ContentVersion.FeaturedContentBoost"
@@ -205,6 +211,7 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Date FeaturedContentDate {
     apiName = "ContentVersion.FeaturedContentDate"
@@ -212,6 +219,7 @@ type salesforce.ContentVersion {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "ContentVersion.OwnerId"
@@ -292,6 +300,7 @@ type salesforce.ContentVersion {
     caseSensitive = false
     length = 20
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist PublishStatus {
     apiName = "ContentVersion.PublishStatus"
@@ -321,6 +330,7 @@ type salesforce.ContentVersion {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text VersionData {
     apiName = "ContentVersion.VersionData"
@@ -341,6 +351,7 @@ type salesforce.ContentVersion {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text FileExtension {
     apiName = "ContentVersion.FileExtension"
@@ -351,6 +362,7 @@ type salesforce.ContentVersion {
     caseSensitive = false
     length = 40
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup FirstPublishLocationId {
     apiName = "ContentVersion.FirstPublishLocationId"
@@ -547,6 +559,7 @@ type salesforce.ContentVersion {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text ExternalDocumentInfo1 {
     apiName = "ContentVersion.ExternalDocumentInfo1"
@@ -588,6 +601,7 @@ type salesforce.ContentVersion {
     caseSensitive = false
     length = 50
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsMajorVersion {
     apiName = "ContentVersion.IsMajorVersion"
@@ -611,5 +625,6 @@ type salesforce.ContentVersion {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

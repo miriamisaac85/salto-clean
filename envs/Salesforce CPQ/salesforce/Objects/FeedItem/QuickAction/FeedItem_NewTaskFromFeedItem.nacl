@@ -1,9 +1,11 @@
 salesforce.QuickAction FeedItem_NewTaskFromFeedItem@v {
   fullName = "FeedItem.NewTaskFromFeedItem"
-  fieldOverrides = {
-    field = "Description"
-    formula = "FeedItem.Body"
-  }
+  fieldOverrides = [
+    {
+      field = "Description"
+      formula = "FeedItem.Body"
+    },
+  ]
   optionsCreateFeedItem = true
   quickActionLayout = {
     layoutSectionStyle = "TwoColumnsLeftToRight"

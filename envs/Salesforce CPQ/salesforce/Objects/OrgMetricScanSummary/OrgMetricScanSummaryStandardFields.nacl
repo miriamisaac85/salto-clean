@@ -26,6 +26,7 @@ type salesforce.OrgMetricScanSummary {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "OrgMetricScanSummary.CreatedDate"

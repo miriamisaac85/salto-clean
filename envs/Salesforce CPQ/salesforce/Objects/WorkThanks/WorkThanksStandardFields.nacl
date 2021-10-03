@@ -108,5 +108,6 @@ type salesforce.WorkThanks {
     updateable = false
     relationshipName = "FeedItem"
     queryable = true
+    _hidden_value = true
   }
 }

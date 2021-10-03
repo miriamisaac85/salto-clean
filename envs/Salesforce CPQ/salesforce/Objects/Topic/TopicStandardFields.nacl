@@ -58,6 +58,7 @@ type salesforce.Topic {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text ManagedTopicType {
     apiName = "Topic.ManagedTopicType"
@@ -68,6 +69,7 @@ type salesforce.Topic {
     caseSensitive = false
     length = 99
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
     apiName = "Topic.SystemModstamp"

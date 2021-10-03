@@ -46,6 +46,8 @@ salesforce.CustomApplication standard__LightningSales {
   uiType = "Lightning"
   utilityBar = "Sales_UtilityBar"
   _generated_dependencies = [
-    salesforce.LightningPage.instance.Sales_UtilityBar,
+    {
+      reference = salesforce.LightningPage.instance.Sales_UtilityBar
+    },
   ]
 }

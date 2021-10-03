@@ -55,6 +55,7 @@ type salesforce.AppProfileActionOverride {
         "Individual",
         "Lead",
         "Location",
+        "ManagedContentVariant",
         "NewObjectName__c",
         "Note",
         "Opportunity",

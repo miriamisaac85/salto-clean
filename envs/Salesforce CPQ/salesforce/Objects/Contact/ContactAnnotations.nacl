@@ -420,7 +420,11 @@ type salesforce.Contact {
     enableTopics = true
   }
   _generated_dependencies = [
-    salesforce.LightningPage.instance.Contact_Record_Page,
-    salesforce.LightningPage.instance.Contact_Record_Page1,
+    {
+      reference = salesforce.LightningPage.instance.Contact_Record_Page
+    },
+    {
+      reference = salesforce.LightningPage.instance.Contact_Record_Page1
+    },
   ]
 }

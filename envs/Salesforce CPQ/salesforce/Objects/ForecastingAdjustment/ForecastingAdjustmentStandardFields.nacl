@@ -17,6 +17,7 @@ type salesforce.ForecastingAdjustment {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup PeriodId {
     apiName = "ForecastingAdjustment.PeriodId"
@@ -27,6 +28,7 @@ type salesforce.ForecastingAdjustment {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Date StartDate {
     apiName = "ForecastingAdjustment.StartDate"
@@ -184,6 +186,7 @@ type salesforce.ForecastingAdjustment {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsAmount {
     apiName = "ForecastingAdjustment.IsAmount"
@@ -192,6 +195,7 @@ type salesforce.ForecastingAdjustment {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ForecastingAdjustment.CreatedDate"

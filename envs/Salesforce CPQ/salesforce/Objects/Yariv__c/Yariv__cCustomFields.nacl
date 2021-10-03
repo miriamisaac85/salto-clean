@@ -22,6 +22,7 @@ type salesforce.Yariv__c {
     externalId = false
     formulaTreatBlanksAs = "BlankAsZero"
     trackTrending = false
+    _hidden_value = true
   }
   salesforce.Checkbox Yariv_Checkbox__c {
     apiName = "Yariv__c.Yariv_Checkbox__c"
@@ -99,6 +100,7 @@ type salesforce.Yariv__c {
     displayLocationInDecimal = false
     externalId = false
     trackTrending = false
+    _hidden_value = true
   }
   salesforce.Number Yariv_Number__c {
     apiName = "Yariv__c.Yariv_Number__c"

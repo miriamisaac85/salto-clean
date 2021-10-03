@@ -13,22 +13,22 @@ salesforce.FieldSet ConsumptionRate_SBQQ__Rates {
       isRequired = false
     },
     {
-      field = "PricingMethod"
+      field = salesforce.ConsumptionRate.field.PricingMethod
       isFieldManaged = false
       isRequired = false
     },
     {
-      field = "LowerBound"
+      field = salesforce.ConsumptionRate.field.LowerBound
       isFieldManaged = false
       isRequired = false
     },
     {
-      field = "UpperBound"
+      field = salesforce.ConsumptionRate.field.UpperBound
       isFieldManaged = false
       isRequired = false
     },
     {
-      field = "Price"
+      field = salesforce.ConsumptionRate.field.Price
       isFieldManaged = false
       isRequired = false
     },

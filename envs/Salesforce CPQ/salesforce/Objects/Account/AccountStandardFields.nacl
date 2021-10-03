@@ -26,6 +26,7 @@ type salesforce.Account {
     updateable = false
     relationshipName = "MasterRecord"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist Type {
     apiName = "Account.Type"
@@ -54,6 +55,7 @@ type salesforce.Account {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Address ShippingAddress {
     apiName = "Account.ShippingAddress"
@@ -61,6 +63,7 @@ type salesforce.Account {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Phone Phone {
     apiName = "Account.Phone"
@@ -82,6 +85,7 @@ type salesforce.Account {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist Industry {
     apiName = "Account.Industry"
@@ -199,6 +203,7 @@ type salesforce.Account {
     caseSensitive = false
     length = 20
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist AccountSource {
     apiName = "Account.AccountSource"
@@ -226,6 +231,7 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown AnnualRevenue {
     apiName = "Account.AnnualRevenue"
@@ -233,6 +239,7 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Fax {
     apiName = "Account.Fax"
@@ -240,6 +247,7 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Name {
     apiName = "Account.Name"
@@ -247,6 +255,7 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Picklist Ownership {
     apiName = "Account.Ownership"
@@ -254,6 +263,7 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Picklist Rating {
     apiName = "Account.Rating"
@@ -261,6 +271,7 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Sic {
     apiName = "Account.Sic"
@@ -268,6 +279,7 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Site {
     apiName = "Account.Site"
@@ -275,6 +287,7 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown TickerSymbol {
     apiName = "Account.TickerSymbol"
@@ -282,5 +295,13 @@ type salesforce.Account {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
+  }
+  salesforce.Unknown Tier {
+    apiName = "Account.Tier"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
   }
 }

@@ -240,4 +240,7 @@ salesforce.LightningPage Account_Record_Page {
     name = "flexipage:recordHomeTemplateDesktop"
   }
   type = "RecordPage"
+  _parent = [
+    salesforce.Account,
+  ]
 }

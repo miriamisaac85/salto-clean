@@ -16,6 +16,7 @@ type salesforce.ForecastingQuota {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Date StartDate {
     apiName = "ForecastingQuota.StartDate"
@@ -74,6 +75,7 @@ type salesforce.ForecastingQuota {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsAmount {
     apiName = "ForecastingQuota.IsAmount"
@@ -82,6 +84,7 @@ type salesforce.ForecastingQuota {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "ForecastingQuota.CreatedDate"

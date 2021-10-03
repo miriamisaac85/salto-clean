@@ -110,6 +110,7 @@ type salesforce.WorkBadge {
     updateable = false
     relationshipName = "Giver"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Url ImageUrl {
     apiName = "WorkBadge.ImageUrl"
@@ -117,6 +118,7 @@ type salesforce.WorkBadge {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "WorkBadge.Description"
@@ -125,6 +127,7 @@ type salesforce.WorkBadge {
     updateable = false
     length = 4000
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Message {
     apiName = "WorkBadge.Message"
@@ -133,5 +136,6 @@ type salesforce.WorkBadge {
     updateable = false
     length = 4000
     queryable = true
+    _hidden_value = true
   }
 }

@@ -16,6 +16,7 @@ type salesforce.PartnerRole {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text ApiName {
     apiName = "PartnerRole.ApiName"
@@ -27,6 +28,7 @@ type salesforce.PartnerRole {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number SortOrder {
     apiName = "PartnerRole.SortOrder"
@@ -37,6 +39,7 @@ type salesforce.PartnerRole {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist ReverseRole {
     apiName = "PartnerRole.ReverseRole"
@@ -46,6 +49,7 @@ type salesforce.PartnerRole {
     updateable = false
     queryable = true
     valueSetName = salesforce.StandardValueSet.instance.PartnerRole
+    _hidden_value = true
   }
   salesforce.Lookup CreatedById {
     apiName = "PartnerRole.CreatedById"

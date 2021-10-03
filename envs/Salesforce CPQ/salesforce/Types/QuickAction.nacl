@@ -26,7 +26,7 @@ type salesforce.QuickAction {
   }
   string description {
   }
-  salesforce.FieldOverride fieldOverrides {
+  "List<salesforce.FieldOverride>" fieldOverrides {
   }
   string flowDefinition {
   }

@@ -23,6 +23,8 @@ type salesforce.FlowCollectionProcessor {
     _restriction = {
       enforce_value = false
       values = [
+        "FilterCollectionProcessor",
+        "RecommendationMapCollectionProcessor",
         "SortCollectionProcessor",
       ]
     }
@@ -40,6 +42,8 @@ type salesforce.FlowCollectionProcessor {
     _restriction = {
       enforce_value = false
       values = [
+        "FilterCollectionProcessor",
+        "RecommendationMapCollectionProcessor",
         "SortCollectionProcessor",
       ]
     }
@@ -53,4 +57,10 @@ type salesforce.FlowCollectionProcessor {
   salesforce.FlowCollectionSortOption sortOptions {
   }
   metadataType = "FlowCollectionProcessor"
+  string assignNextValueToReference {
+  }
+  salesforce.FlowCollectionMapItem mapItems {
+  }
+  string outputSObjectType {
+  }
 }

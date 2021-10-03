@@ -16,6 +16,7 @@ type salesforce.PricebookEntry {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup Pricebook2Id {
     apiName = "PricebookEntry.Pricebook2Id"
@@ -124,6 +125,7 @@ type salesforce.PricebookEntry {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "PricebookEntry.IsDeleted"
@@ -141,11 +143,13 @@ type salesforce.PricebookEntry {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Unknown StandardPrice {
     apiName = "PricebookEntry.StandardPrice"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

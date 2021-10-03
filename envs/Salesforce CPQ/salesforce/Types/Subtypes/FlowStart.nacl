@@ -23,6 +23,8 @@ type salesforce.FlowStart {
     _restriction = {
       enforce_value = false
       values = [
+        "FilterCollectionProcessor",
+        "RecommendationMapCollectionProcessor",
         "SortCollectionProcessor",
       ]
     }

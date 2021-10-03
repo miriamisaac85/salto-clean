@@ -17,6 +17,7 @@ type salesforce.Site {
     caseSensitive = false
     length = 80
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text Subdomain {
     apiName = "Site.Subdomain"
@@ -27,6 +28,7 @@ type salesforce.Site {
     caseSensitive = false
     length = 80
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text UrlPathPrefix {
     apiName = "Site.UrlPathPrefix"
@@ -37,6 +39,7 @@ type salesforce.Site {
     caseSensitive = false
     length = 40
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup GuestUserId {
     apiName = "Site.GuestUserId"
@@ -48,6 +51,7 @@ type salesforce.Site {
     updateable = false
     relationshipName = "GuestUser"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist Status {
     apiName = "Site.Status"
@@ -71,6 +75,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup AdminId {
     apiName = "Site.AdminId"
@@ -83,6 +88,7 @@ type salesforce.Site {
     updateable = false
     relationshipName = "Admin"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsEnableFeeds {
     apiName = "Site.OptionsEnableFeeds"
@@ -90,6 +96,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsRequireHttps {
     apiName = "Site.OptionsRequireHttps"
@@ -97,6 +104,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsAllowGuestPaymentsApi {
     apiName = "Site.OptionsAllowGuestPaymentsApi"
@@ -104,6 +112,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsHasStoredPathPrefix {
     apiName = "Site.OptionsHasStoredPathPrefix"
@@ -111,6 +120,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsAllowHomePage {
     apiName = "Site.OptionsAllowHomePage"
@@ -118,6 +128,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsAllowStandardIdeasPages {
     apiName = "Site.OptionsAllowStandardIdeasPages"
@@ -125,6 +136,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsAllowStandardSearch {
     apiName = "Site.OptionsAllowStandardSearch"
@@ -132,6 +144,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsAllowStandardLookups {
     apiName = "Site.OptionsAllowStandardLookups"
@@ -139,6 +152,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsAllowStandardAnswersPages {
     apiName = "Site.OptionsAllowStandardAnswersPages"
@@ -146,6 +160,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsAllowGuestSupportApi {
     apiName = "Site.OptionsAllowGuestSupportApi"
@@ -153,6 +168,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsAllowStandardPortalPages {
     apiName = "Site.OptionsAllowStandardPortalPages"
@@ -160,6 +176,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsCspUpgradeInsecureRequests {
     apiName = "Site.OptionsCspUpgradeInsecureRequests"
@@ -167,6 +184,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsContentSniffingProtection {
     apiName = "Site.OptionsContentSniffingProtection"
@@ -174,6 +192,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsBrowserXssProtection {
     apiName = "Site.OptionsBrowserXssProtection"
@@ -181,6 +200,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox OptionsReferrerPolicyOriginWhenCrossOrigin {
     apiName = "Site.OptionsReferrerPolicyOriginWhenCrossOrigin"
@@ -188,6 +208,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "Site.Description"
@@ -196,6 +217,7 @@ type salesforce.Site {
     updateable = false
     length = 1000
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text MasterLabel {
     apiName = "Site.MasterLabel"
@@ -207,6 +229,7 @@ type salesforce.Site {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text AnalyticsTrackingCode {
     apiName = "Site.AnalyticsTrackingCode"
@@ -217,6 +240,7 @@ type salesforce.Site {
     caseSensitive = false
     length = 40
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist SiteType {
     apiName = "Site.SiteType"
@@ -240,6 +264,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist ClickjackProtectionLevel {
     apiName = "Site.ClickjackProtectionLevel"
@@ -275,6 +300,7 @@ type salesforce.Site {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number DailyBandwidthLimit {
     apiName = "Site.DailyBandwidthLimit"
@@ -285,6 +311,7 @@ type salesforce.Site {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number DailyBandwidthUsed {
     apiName = "Site.DailyBandwidthUsed"
@@ -295,6 +322,7 @@ type salesforce.Site {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number DailyRequestTimeLimit {
     apiName = "Site.DailyRequestTimeLimit"
@@ -305,6 +333,7 @@ type salesforce.Site {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number DailyRequestTimeUsed {
     apiName = "Site.DailyRequestTimeUsed"
@@ -315,6 +344,7 @@ type salesforce.Site {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number MonthlyPageViewsEntitlement {
     apiName = "Site.MonthlyPageViewsEntitlement"
@@ -325,6 +355,7 @@ type salesforce.Site {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Site.CreatedDate"
@@ -384,5 +415,6 @@ type salesforce.Site {
     updateable = false
     relationshipName = "GuestRecordDefaultOwner"
     queryable = true
+    _hidden_value = true
   }
 }

@@ -142,6 +142,7 @@ type salesforce.Campaign {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number NumberOfConvertedLeads {
     apiName = "Campaign.NumberOfConvertedLeads"
@@ -153,6 +154,7 @@ type salesforce.Campaign {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number NumberOfContacts {
     apiName = "Campaign.NumberOfContacts"
@@ -164,6 +166,7 @@ type salesforce.Campaign {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number NumberOfResponses {
     apiName = "Campaign.NumberOfResponses"
@@ -175,6 +178,7 @@ type salesforce.Campaign {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number NumberOfOpportunities {
     apiName = "Campaign.NumberOfOpportunities"
@@ -186,6 +190,7 @@ type salesforce.Campaign {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number NumberOfWonOpportunities {
     apiName = "Campaign.NumberOfWonOpportunities"
@@ -197,6 +202,7 @@ type salesforce.Campaign {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Currency AmountAllOpportunities {
     apiName = "Campaign.AmountAllOpportunities"
@@ -207,6 +213,7 @@ type salesforce.Campaign {
     scale = 0
     precision = 18
     queryable = true
+    _hidden_value = true
   }
   salesforce.Currency AmountWonOpportunities {
     apiName = "Campaign.AmountWonOpportunities"
@@ -217,6 +224,7 @@ type salesforce.Campaign {
     scale = 0
     precision = 18
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Campaign.OwnerId"
@@ -302,71 +310,83 @@ type salesforce.Campaign {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyAmountAllOpportunities {
     apiName = "Campaign.HierarchyAmountAllOpportunities"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyAmountWonOpportunities {
     apiName = "Campaign.HierarchyAmountWonOpportunities"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyBudgetedCost {
     apiName = "Campaign.HierarchyBudgetedCost"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyExpectedRevenue {
     apiName = "Campaign.HierarchyExpectedRevenue"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfContacts {
     apiName = "Campaign.HierarchyNumberOfContacts"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfConvertedLeads {
     apiName = "Campaign.HierarchyNumberOfConvertedLeads"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfLeads {
     apiName = "Campaign.HierarchyNumberOfLeads"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfOpportunities {
     apiName = "Campaign.HierarchyNumberOfOpportunities"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfResponses {
     apiName = "Campaign.HierarchyNumberOfResponses"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfWonOpportunities {
     apiName = "Campaign.HierarchyNumberOfWonOpportunities"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberSent {
     apiName = "Campaign.HierarchyNumberSent"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

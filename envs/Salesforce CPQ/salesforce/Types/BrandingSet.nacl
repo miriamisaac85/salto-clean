@@ -25,6 +25,7 @@ type salesforce.BrandingSet {
     _restriction = {
       enforce_value = false
       values = [
+        "b2b-storefront:branding",
         "b2b:branding-b2b",
         "b2c-lite-storefront:branding",
         "citizen:branding-citizen",

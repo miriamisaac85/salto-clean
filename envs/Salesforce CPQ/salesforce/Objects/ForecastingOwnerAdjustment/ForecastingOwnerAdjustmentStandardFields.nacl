@@ -75,6 +75,7 @@ type salesforce.ForecastingOwnerAdjustment {
     updateable = false
     relationshipName = "ForecastingItem"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Currency OwnerAdjustedAmount {
     apiName = "ForecastingOwnerAdjustment.OwnerAdjustedAmount"
@@ -112,6 +113,7 @@ type salesforce.ForecastingOwnerAdjustment {
     updateable = false
     relationshipName = "Period"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup ForecastOwnerId {
     apiName = "ForecastingOwnerAdjustment.ForecastOwnerId"
@@ -246,6 +248,7 @@ type salesforce.ForecastingOwnerAdjustment {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsAmount {
     apiName = "ForecastingOwnerAdjustment.IsAmount"
@@ -254,6 +257,7 @@ type salesforce.ForecastingOwnerAdjustment {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup ForecastingTypeId {
     apiName = "ForecastingOwnerAdjustment.ForecastingTypeId"

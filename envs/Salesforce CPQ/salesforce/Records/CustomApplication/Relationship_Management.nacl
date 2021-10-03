@@ -39,6 +39,8 @@ salesforce.CustomApplication Relationship_Management {
   uiType = "Lightning"
   utilityBar = "Relationship_Management_UtilityBar"
   _generated_dependencies = [
-    salesforce.LightningPage.instance.Relationship_Management_UtilityBar,
+    {
+      reference = salesforce.LightningPage.instance.Relationship_Management_UtilityBar
+    },
   ]
 }

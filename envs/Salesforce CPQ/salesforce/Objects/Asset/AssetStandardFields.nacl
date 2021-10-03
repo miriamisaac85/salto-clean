@@ -54,6 +54,7 @@ type salesforce.Asset {
     relationshipName = "RootAsset"
     queryable = true
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Lookup Product2Id {
     apiName = "Asset.Product2Id"
@@ -76,6 +77,7 @@ type salesforce.Asset {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsCompetitorProduct {
     apiName = "Asset.IsCompetitorProduct"
@@ -275,6 +277,7 @@ type salesforce.Asset {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text StockKeepingUnit {
     apiName = "Asset.StockKeepingUnit"
@@ -285,6 +288,7 @@ type salesforce.Asset {
     caseSensitive = false
     length = 180
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist DigitalAssetStatus {
     apiName = "Asset.DigitalAssetStatus"
@@ -292,6 +296,7 @@ type salesforce.Asset {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown ExternalIdentifier {
     apiName = "Asset.ExternalIdentifier"
@@ -300,6 +305,7 @@ type salesforce.Asset {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Lookup LocationId {
     apiName = "Asset.LocationId"
@@ -307,6 +313,7 @@ type salesforce.Asset {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown ManufactureDate {
     apiName = "Asset.ManufactureDate"
@@ -315,18 +322,21 @@ type salesforce.Asset {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown ProductDescription {
     apiName = "Asset.ProductDescription"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Picklist ProductFamily {
     apiName = "Asset.ProductFamily"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Picklist StatusReason {
     apiName = "Asset.StatusReason"
@@ -335,6 +345,7 @@ type salesforce.Asset {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Uuid {
     apiName = "Asset.Uuid"
@@ -343,5 +354,6 @@ type salesforce.Asset {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

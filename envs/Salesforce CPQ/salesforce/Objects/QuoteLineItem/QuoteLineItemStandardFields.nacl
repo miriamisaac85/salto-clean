@@ -184,6 +184,7 @@ type salesforce.QuoteLineItem {
     scale = 2
     precision = 18
     queryable = true
+    _hidden_value = true
   }
   salesforce.Currency Subtotal {
     apiName = "QuoteLineItem.Subtotal"
@@ -193,6 +194,7 @@ type salesforce.QuoteLineItem {
     scale = 2
     precision = 18
     queryable = true
+    _hidden_value = true
   }
   salesforce.Currency TotalPrice {
     apiName = "QuoteLineItem.TotalPrice"
@@ -202,11 +204,13 @@ type salesforce.QuoteLineItem {
     scale = 2
     precision = 18
     queryable = true
+    _hidden_value = true
   }
   salesforce.Unknown ProductCode {
     apiName = "QuoteLineItem.ProductCode"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

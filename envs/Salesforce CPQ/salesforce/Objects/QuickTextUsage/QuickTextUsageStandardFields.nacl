@@ -39,6 +39,7 @@ type salesforce.QuickTextUsage {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "QuickTextUsage.CreatedDate"
@@ -99,6 +100,7 @@ type salesforce.QuickTextUsage {
     updateable = false
     relationshipName = "QuickText"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist Channel {
     apiName = "QuickTextUsage.Channel"
@@ -175,6 +177,7 @@ type salesforce.QuickTextUsage {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist LaunchSource {
     apiName = "QuickTextUsage.LaunchSource"
@@ -209,6 +212,7 @@ type salesforce.QuickTextUsage {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime LoggedTime {
     apiName = "QuickTextUsage.LoggedTime"
@@ -216,6 +220,7 @@ type salesforce.QuickTextUsage {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup UserId {
     apiName = "QuickTextUsage.UserId"
@@ -227,6 +232,7 @@ type salesforce.QuickTextUsage {
     updateable = false
     relationshipName = "User"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist AppContext {
     apiName = "QuickTextUsage.AppContext"
@@ -255,5 +261,6 @@ type salesforce.QuickTextUsage {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
 }

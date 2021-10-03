@@ -79,7 +79,7 @@ type salesforce.Flow {
         "Orchestrator",
         "RecommendationStrategy",
         "RoutingFlow",
-        "SalesEntryExperienceFlow",
+        "ServiceCatalogItemFlow",
         "Survey",
         "SurveyEnrich",
         "TransactionSecurityFlow",

@@ -273,6 +273,7 @@ Term length of the subscription, which only applies if the product is a subscrip
     externalId = false
     formulaTreatBlanksAs = "BlankAsZero"
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Number SBQQ__OrderedQuantity__c {
     apiName = "OrderItem.SBQQ__OrderedQuantity__c"

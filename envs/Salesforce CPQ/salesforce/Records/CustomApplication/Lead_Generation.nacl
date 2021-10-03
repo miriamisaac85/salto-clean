@@ -37,6 +37,8 @@ salesforce.CustomApplication Lead_Generation {
   uiType = "Lightning"
   utilityBar = "Lead_Generation_UtilityBar"
   _generated_dependencies = [
-    salesforce.LightningPage.instance.Lead_Generation_UtilityBar,
+    {
+      reference = salesforce.LightningPage.instance.Lead_Generation_UtilityBar
+    },
   ]
 }

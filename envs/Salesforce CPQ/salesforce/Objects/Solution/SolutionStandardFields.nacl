@@ -69,6 +69,7 @@ type salesforce.Solution {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Html SolutionNote {
     apiName = "Solution.SolutionNote"
@@ -148,6 +149,7 @@ type salesforce.Solution {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsHtml {
     apiName = "Solution.IsHtml"
@@ -156,5 +158,6 @@ type salesforce.Solution {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
 }

@@ -172,4 +172,7 @@ salesforce.LightningPage Opportunity_Record_Page {
     name = "flexipage:recordHomeWithSubheaderTemplateDesktop"
   }
   type = "RecordPage"
+  _parent = [
+    salesforce.Opportunity,
+  ]
 }

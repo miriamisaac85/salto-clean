@@ -26,6 +26,7 @@ type salesforce.Lead {
     updateable = false
     relationshipName = "MasterRecord"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Name Name {
     apiName = "Lead.Name"
@@ -34,6 +35,7 @@ type salesforce.Lead {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text Title {
     apiName = "Lead.Title"
@@ -62,6 +64,7 @@ type salesforce.Lead {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Phone Phone {
     apiName = "Lead.Phone"
@@ -98,6 +101,7 @@ type salesforce.Lead {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "Lead.Description"
@@ -186,6 +190,7 @@ type salesforce.Lead {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup ConvertedAccountId {
     apiName = "Lead.ConvertedAccountId"
@@ -197,6 +202,7 @@ type salesforce.Lead {
     updateable = false
     relationshipName = "ConvertedAccount"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup ConvertedContactId {
     apiName = "Lead.ConvertedContactId"
@@ -208,6 +214,7 @@ type salesforce.Lead {
     updateable = false
     relationshipName = "ConvertedContact"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup ConvertedOpportunityId {
     apiName = "Lead.ConvertedOpportunityId"
@@ -219,6 +226,7 @@ type salesforce.Lead {
     updateable = false
     relationshipName = "ConvertedOpportunity"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsUnreadByOwner {
     apiName = "Lead.IsUnreadByOwner"
@@ -303,6 +311,7 @@ type salesforce.Lead {
     caseSensitive = false
     length = 20
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text EmailBouncedReason {
     apiName = "Lead.EmailBouncedReason"
@@ -339,12 +348,14 @@ type salesforce.Lead {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Lookup CampaignId {
     apiName = "Lead.CampaignId"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown DoNotCall {
     apiName = "Lead.DoNotCall"
@@ -352,6 +363,7 @@ type salesforce.Lead {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Fax {
     apiName = "Lead.Fax"
@@ -359,6 +371,7 @@ type salesforce.Lead {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HasOptedOutOfEmail {
     apiName = "Lead.HasOptedOutOfEmail"
@@ -366,6 +379,7 @@ type salesforce.Lead {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HasOptedOutOfFax {
     apiName = "Lead.HasOptedOutOfFax"
@@ -373,11 +387,13 @@ type salesforce.Lead {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown LastTransferDate {
     apiName = "Lead.LastTransferDate"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

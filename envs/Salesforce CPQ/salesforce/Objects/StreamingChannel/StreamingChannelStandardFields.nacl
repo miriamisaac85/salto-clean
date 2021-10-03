@@ -95,6 +95,7 @@ type salesforce.StreamingChannel {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text Description {
     apiName = "StreamingChannel.Description"

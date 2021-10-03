@@ -215,5 +215,6 @@ type salesforce.ConsumptionSchedule {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
 }

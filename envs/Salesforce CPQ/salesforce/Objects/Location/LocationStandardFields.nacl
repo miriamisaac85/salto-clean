@@ -125,6 +125,7 @@ type salesforce.Location {
     relationshipName = "RootLocation"
     queryable = true
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Text ExternalReference {
     apiName = "Location.ExternalReference"
@@ -154,6 +155,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown ConstructionEndDate {
     apiName = "Location.ConstructionEndDate"
@@ -161,6 +163,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown ConstructionStartDate {
     apiName = "Location.ConstructionStartDate"
@@ -168,6 +171,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Description {
     apiName = "Location.Description"
@@ -175,6 +179,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown DrivingDirections {
     apiName = "Location.DrivingDirections"
@@ -182,6 +187,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Location {
     apiName = "Location.Location"
@@ -189,6 +195,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown LocationLevel {
     apiName = "Location.LocationLevel"
@@ -196,6 +203,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown OpenDate {
     apiName = "Location.OpenDate"
@@ -203,6 +211,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown PossessionDate {
     apiName = "Location.PossessionDate"
@@ -210,6 +219,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown RemodelEndDate {
     apiName = "Location.RemodelEndDate"
@@ -217,6 +227,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown RemodelStartDate {
     apiName = "Location.RemodelStartDate"
@@ -224,6 +235,7 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown TimeZone {
     apiName = "Location.TimeZone"
@@ -231,5 +243,6 @@ type salesforce.Location {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

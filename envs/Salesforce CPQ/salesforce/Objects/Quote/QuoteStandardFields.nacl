@@ -137,6 +137,7 @@ type salesforce.Quote {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Currency ShippingHandling {
     apiName = "Quote.ShippingHandling"
@@ -186,6 +187,7 @@ type salesforce.Quote {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Summary TotalPrice {
     apiName = "Quote.TotalPrice"
@@ -193,6 +195,7 @@ type salesforce.Quote {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Summary LineItemCount {
     apiName = "Quote.LineItemCount"
@@ -201,6 +204,7 @@ type salesforce.Quote {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Address BillingAddress {
     apiName = "Quote.BillingAddress"
@@ -208,6 +212,7 @@ type salesforce.Quote {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Address ShippingAddress {
     apiName = "Quote.ShippingAddress"
@@ -215,6 +220,7 @@ type salesforce.Quote {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Address QuoteToAddress {
     apiName = "Quote.QuoteToAddress"
@@ -222,6 +228,7 @@ type salesforce.Quote {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Address AdditionalAddress {
     apiName = "Quote.AdditionalAddress"
@@ -229,6 +236,7 @@ type salesforce.Quote {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text BillingName {
     apiName = "Quote.BillingName"
@@ -313,6 +321,7 @@ type salesforce.Quote {
     updateable = false
     relationshipName = "Account"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Percent Discount {
     apiName = "Quote.Discount"
@@ -322,6 +331,7 @@ type salesforce.Quote {
     scale = 2
     precision = 5
     queryable = true
+    _hidden_value = true
   }
   salesforce.Currency GrandTotal {
     apiName = "Quote.GrandTotal"
@@ -331,6 +341,7 @@ type salesforce.Quote {
     scale = 2
     precision = 18
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox CanCreateQuoteLineItems {
     apiName = "Quote.CanCreateQuoteLineItems"

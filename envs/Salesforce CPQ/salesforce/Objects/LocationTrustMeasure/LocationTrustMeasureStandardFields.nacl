@@ -162,5 +162,6 @@ type salesforce.LocationTrustMeasure {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
 }

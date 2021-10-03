@@ -2,9 +2,9 @@ salesforce.SearchSettings {
   fullName = "Search"
   documentContentSearchEnabled = true
   enableAdvancedSearchInAlohaSidebar = false
-  enableEinsteinSearchAssistantDialog = "false"
-  enableEinsteinSearchNaturalLanguage = "false"
-  enableEinsteinSearchPersonalization = false
+  enableEinsteinSearchAssistantDialog = "true"
+  enableEinsteinSearchNaturalLanguage = "true"
+  enableEinsteinSearchPersonalization = true
   enablePersonalTagging = false
   enablePublicTagging = false
   enableSetupSearch = true
@@ -232,6 +232,12 @@ salesforce.SearchSettings {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
         name = "ListEmail"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Location
         resultsPerPageCount = 25
       },
       {

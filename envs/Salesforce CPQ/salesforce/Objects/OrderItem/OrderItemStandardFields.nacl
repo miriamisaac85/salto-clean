@@ -71,6 +71,7 @@ type salesforce.OrderItem {
     updateable = false
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number Quantity {
     apiName = "OrderItem.Quantity"
@@ -109,6 +110,7 @@ type salesforce.OrderItem {
     scale = 2
     precision = 18
     queryable = true
+    _hidden_value = true
   }
   salesforce.Date ServiceDate {
     apiName = "OrderItem.ServiceDate"
@@ -195,6 +197,7 @@ type salesforce.OrderItem {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Lookup QuoteLineItemId {
     apiName = "OrderItem.QuoteLineItemId"
@@ -202,5 +205,6 @@ type salesforce.OrderItem {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

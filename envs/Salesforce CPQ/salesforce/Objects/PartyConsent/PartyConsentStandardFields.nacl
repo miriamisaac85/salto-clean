@@ -247,6 +247,7 @@ type salesforce.PartyConsent {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown EffectiveFrom {
     apiName = "PartyConsent.EffectiveFrom"
@@ -254,6 +255,7 @@ type salesforce.PartyConsent {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown EffectiveTo {
     apiName = "PartyConsent.EffectiveTo"
@@ -261,5 +263,22 @@ type salesforce.PartyConsent {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup BusinessBrandId {
+    apiName = "PartyConsent.BusinessBrandId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup PartyRoleId {
+    apiName = "PartyConsent.PartyRoleId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
   }
 }

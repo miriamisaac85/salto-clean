@@ -44,6 +44,7 @@ type salesforce.AIApplication {
         "IntelligentOffers",
         "KeyAccountIdentification",
         "LeadScoring",
+        "OpportunityPushedOutInsight",
         "OpportunityScoring",
         "Platform",
         "PredictionBuilder",

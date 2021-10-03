@@ -189,6 +189,7 @@ type salesforce.EmailMessage {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist Status {
     apiName = "EmailMessage.Status"
@@ -271,6 +272,7 @@ type salesforce.EmailMessage {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text MessageIdentifier {
     apiName = "EmailMessage.MessageIdentifier"
@@ -346,6 +348,7 @@ type salesforce.EmailMessage {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime FirstOpenedDate {
     apiName = "EmailMessage.FirstOpenedDate"
@@ -385,11 +388,13 @@ type salesforce.EmailMessage {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown MessageSize {
     apiName = "EmailMessage.MessageSize"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

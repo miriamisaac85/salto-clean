@@ -136,6 +136,7 @@ type salesforce.Asset {
     description = "ID of upgrade credit product for this asset."
     externalId = false
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Lookup SBQQ__CurrentSubscription__c {
     apiName = "Asset.SBQQ__CurrentSubscription__c"
@@ -171,6 +172,7 @@ type salesforce.Asset {
     externalId = false
     formulaTreatBlanksAs = "BlankAsZero"
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Picklist SBQQ__DiscountScheduleType__c {
     apiName = "Asset.SBQQ__DiscountScheduleType__c"

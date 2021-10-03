@@ -36,6 +36,7 @@ type salesforce.Individual {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox HasOptedOutTracking {
     apiName = "Individual.HasOptedOutTracking"
@@ -222,6 +223,7 @@ type salesforce.Individual {
     updateable = false
     relationshipName = "MasterRecord"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number ConsumerCreditScore {
     apiName = "Individual.ConsumerCreditScore"

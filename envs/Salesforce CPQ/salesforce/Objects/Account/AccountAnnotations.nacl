@@ -318,8 +318,14 @@ type salesforce.Account {
     enableTopics = true
   }
   _generated_dependencies = [
-    salesforce.LightningPage.instance.Account_Record_Page,
-    salesforce.LightningPage.instance.Account_Record_Page1,
-    salesforce.LightningPage.instance.Account_Record_Page2,
+    {
+      reference = salesforce.LightningPage.instance.Account_Record_Page
+    },
+    {
+      reference = salesforce.LightningPage.instance.Account_Record_Page1
+    },
+    {
+      reference = salesforce.LightningPage.instance.Account_Record_Page2
+    },
   ]
 }

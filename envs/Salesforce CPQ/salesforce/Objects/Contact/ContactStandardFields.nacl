@@ -26,6 +26,7 @@ type salesforce.Contact {
     updateable = false
     relationshipName = "MasterRecord"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup AccountId {
     apiName = "Contact.AccountId"
@@ -46,6 +47,7 @@ type salesforce.Contact {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Address MailingAddress {
     apiName = "Contact.MailingAddress"
@@ -53,6 +55,7 @@ type salesforce.Contact {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Phone Phone {
     apiName = "Contact.Phone"
@@ -190,6 +193,7 @@ type salesforce.Contact {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime LastCUUpdateDate {
     apiName = "Contact.LastCUUpdateDate"
@@ -197,6 +201,7 @@ type salesforce.Contact {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text EmailBouncedReason {
     apiName = "Contact.EmailBouncedReason"
@@ -222,6 +227,7 @@ type salesforce.Contact {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Url PhotoUrl {
     apiName = "Contact.PhotoUrl"
@@ -229,6 +235,7 @@ type salesforce.Contact {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text Jigsaw {
     apiName = "Contact.Jigsaw"
@@ -249,6 +256,7 @@ type salesforce.Contact {
     caseSensitive = false
     length = 20
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup IndividualId {
     apiName = "Contact.IndividualId"
@@ -268,6 +276,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown AssistantPhone {
     apiName = "Contact.AssistantPhone"
@@ -275,6 +284,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Birthdate {
     apiName = "Contact.Birthdate"
@@ -282,6 +292,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Description {
     apiName = "Contact.Description"
@@ -289,6 +300,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown DoNotCall {
     apiName = "Contact.DoNotCall"
@@ -296,6 +308,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HasOptedOutOfEmail {
     apiName = "Contact.HasOptedOutOfEmail"
@@ -303,6 +316,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HasOptedOutOfFax {
     apiName = "Contact.HasOptedOutOfFax"
@@ -310,6 +324,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown HomePhone {
     apiName = "Contact.HomePhone"
@@ -317,6 +332,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Picklist LeadSource {
     apiName = "Contact.LeadSource"
@@ -324,6 +340,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown OtherAddress {
     apiName = "Contact.OtherAddress"
@@ -331,6 +348,7 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown OtherPhone {
     apiName = "Contact.OtherPhone"
@@ -338,5 +356,6 @@ type salesforce.Contact {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

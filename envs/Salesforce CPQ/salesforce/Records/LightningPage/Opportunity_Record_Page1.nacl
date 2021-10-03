@@ -165,4 +165,7 @@ salesforce.LightningPage Opportunity_Record_Page1 {
     name = "flexipage:recordHomeThreeColTemplateDesktop"
   }
   type = "RecordPage"
+  _parent = [
+    salesforce.Opportunity,
+  ]
 }

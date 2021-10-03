@@ -15,6 +15,7 @@ type salesforce.Contract {
     externalId = false
     formulaTreatBlanksAs = "BlankAsZero"
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Text SBQQ__AmendmentOpportunityRecordTypeId__c {
     apiName = "Contract.SBQQ__AmendmentOpportunityRecordTypeId__c"
@@ -191,6 +192,7 @@ type salesforce.Contract {
     externalId = false
     formulaTreatBlanksAs = "BlankAsZero"
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Picklist SBQQ__MDQRenewalBehavior__c {
     apiName = "Contract.SBQQ__MDQRenewalBehavior__c"
@@ -244,6 +246,7 @@ type salesforce.Contract {
     externalId = false
     formulaTreatBlanksAs = "BlankAsZero"
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Lookup SBQQ__Opportunity__c {
     apiName = "Contract.SBQQ__Opportunity__c"

@@ -23,6 +23,8 @@ type salesforce.FlowRecordUpdate {
     _restriction = {
       enforce_value = false
       values = [
+        "FilterCollectionProcessor",
+        "RecommendationMapCollectionProcessor",
         "SortCollectionProcessor",
       ]
     }

@@ -48,6 +48,7 @@ type salesforce.AccountContactRelation {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsActive {
     apiName = "AccountContactRelation.IsActive"

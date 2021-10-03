@@ -59,6 +59,7 @@ type salesforce.Event {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number WhatCount {
     apiName = "Event.WhatCount"
@@ -69,6 +70,7 @@ type salesforce.Event {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist Subject {
     apiName = "Event.Subject"
@@ -142,6 +144,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "Event.Description"
@@ -161,6 +164,7 @@ type salesforce.Event {
     updateable = false
     relationshipName = "Account"
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup OwnerId {
     apiName = "Event.OwnerId"
@@ -238,6 +242,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsGroupEvent {
     apiName = "Event.IsGroupEvent"
@@ -246,6 +251,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist GroupEventType {
     apiName = "Event.GroupEventType"
@@ -280,6 +286,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Event.CreatedDate"
@@ -336,6 +343,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Lookup RecurrenceActivityId {
     apiName = "Event.RecurrenceActivityId"
@@ -346,6 +354,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsRecurrence {
     apiName = "Event.IsRecurrence"
@@ -380,6 +389,18 @@ type salesforce.Event {
         isActive = true
       },
       {
+        fullName = "Pacific/Chatham"
+        default = false
+        label = "(GMT+13:45) Chatham Daylight Time (Pacific/Chatham)"
+        isActive = true
+      },
+      {
+        fullName = "Pacific/Auckland"
+        default = false
+        label = "(GMT+13:00) New Zealand Daylight Time (Pacific/Auckland)"
+        isActive = true
+      },
+      {
         fullName = "Pacific/Enderbury"
         default = false
         label = "(GMT+13:00) Phoenix Islands Time (Pacific/Enderbury)"
@@ -392,21 +413,9 @@ type salesforce.Event {
         isActive = true
       },
       {
-        fullName = "Pacific/Chatham"
-        default = false
-        label = "(GMT+12:45) Chatham Standard Time (Pacific/Chatham)"
-        isActive = true
-      },
-      {
         fullName = "Asia/Kamchatka"
         default = false
         label = "(GMT+12:00) Petropavlovsk-Kamchatski Standard Time (Asia/Kamchatka)"
-        isActive = true
-      },
-      {
-        fullName = "Pacific/Auckland"
-        default = false
-        label = "(GMT+12:00) New Zealand Standard Time (Pacific/Auckland)"
         isActive = true
       },
       {
@@ -416,39 +425,39 @@ type salesforce.Event {
         isActive = true
       },
       {
+        fullName = "Pacific/Norfolk"
+        default = false
+        label = "(GMT+12:00) Norfolk Island Daylight Time (Pacific/Norfolk)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Lord_Howe"
+        default = false
+        label = "(GMT+11:00) Lord Howe Daylight Time (Australia/Lord_Howe)"
+        isActive = true
+      },
+      {
+        fullName = "Australia/Sydney"
+        default = false
+        label = "(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)"
+        isActive = true
+      },
+      {
         fullName = "Pacific/Guadalcanal"
         default = false
         label = "(GMT+11:00) Solomon Islands Time (Pacific/Guadalcanal)"
         isActive = true
       },
       {
-        fullName = "Pacific/Norfolk"
+        fullName = "Australia/Adelaide"
         default = false
-        label = "(GMT+11:00) Norfolk Island Standard Time (Pacific/Norfolk)"
-        isActive = true
-      },
-      {
-        fullName = "Australia/Lord_Howe"
-        default = false
-        label = "(GMT+10:30) Lord Howe Standard Time (Australia/Lord_Howe)"
+        label = "(GMT+10:30) Australian Central Daylight Time (Australia/Adelaide)"
         isActive = true
       },
       {
         fullName = "Australia/Brisbane"
         default = false
         label = "(GMT+10:00) Australian Eastern Standard Time (Australia/Brisbane)"
-        isActive = true
-      },
-      {
-        fullName = "Australia/Sydney"
-        default = false
-        label = "(GMT+10:00) Australian Eastern Standard Time (Australia/Sydney)"
-        isActive = true
-      },
-      {
-        fullName = "Australia/Adelaide"
-        default = false
-        label = "(GMT+09:30) Australian Central Standard Time (Australia/Adelaide)"
         isActive = true
       },
       {
@@ -584,12 +593,6 @@ type salesforce.Event {
         isActive = true
       },
       {
-        fullName = "Asia/Tehran"
-        default = false
-        label = "(GMT+04:30) Iran Daylight Time (Asia/Tehran)"
-        isActive = true
-      },
-      {
         fullName = "Asia/Baku"
         default = false
         label = "(GMT+04:00) Azerbaijan Standard Time (Asia/Baku)"
@@ -611,6 +614,12 @@ type salesforce.Event {
         fullName = "Asia/Yerevan"
         default = false
         label = "(GMT+04:00) Armenia Standard Time (Asia/Yerevan)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Tehran"
+        default = false
+        label = "(GMT+03:30) Iran Standard Time (Asia/Tehran)"
         isActive = true
       },
       {
@@ -812,6 +821,12 @@ type salesforce.Event {
         isActive = true
       },
       {
+        fullName = "America/Santiago"
+        default = false
+        label = "(GMT-03:00) Chile Summer Time (America/Santiago)"
+        isActive = true
+      },
+      {
         fullName = "America/Sao_Paulo"
         default = false
         label = "(GMT-03:00) Brasilia Standard Time (America/Sao_Paulo)"
@@ -845,12 +860,6 @@ type salesforce.Event {
         fullName = "America/Puerto_Rico"
         default = false
         label = "(GMT-04:00) Atlantic Standard Time (America/Puerto_Rico)"
-        isActive = true
-      },
-      {
-        fullName = "America/Santiago"
-        default = false
-        label = "(GMT-04:00) Chile Standard Time (America/Santiago)"
         isActive = true
       },
       {
@@ -1215,6 +1224,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Recurrence2PatternText {
     apiName = "Event.Recurrence2PatternText"
@@ -1239,6 +1249,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsRecurrence2 {
     apiName = "Event.IsRecurrence2"
@@ -1247,6 +1258,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsRecurrence2Exception {
     apiName = "Event.IsRecurrence2Exception"
@@ -1255,6 +1267,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime Recurrence2PatternStartDate {
     apiName = "Event.Recurrence2PatternStartDate"
@@ -1262,6 +1275,7 @@ type salesforce.Event {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text Recurrence2PatternTimeZone {
     apiName = "Event.Recurrence2PatternTimeZone"
@@ -1272,23 +1286,27 @@ type salesforce.Event {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Unknown Attendees {
     apiName = "Event.Attendees"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Email {
     apiName = "Event.Email"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Phone {
     apiName = "Event.Phone"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

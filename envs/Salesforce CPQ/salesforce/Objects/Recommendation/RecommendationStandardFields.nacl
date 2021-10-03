@@ -138,6 +138,7 @@ type salesforce.Recommendation {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text ExternalId {
     apiName = "Recommendation.ExternalId"

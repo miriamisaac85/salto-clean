@@ -28,6 +28,7 @@ type salesforce.BusinessHoursEntry {
   string mondayStartTime {
   }
   string name {
+    _required = true
   }
   string saturdayEndTime {
   }

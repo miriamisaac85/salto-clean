@@ -203,4 +203,7 @@ salesforce.LightningPage Lead_Record_Page1 {
     name = "flexipage:recordHomeThreeColTemplateDesktop"
   }
   type = "RecordPage"
+  _parent = [
+    salesforce.Lead,
+  ]
 }

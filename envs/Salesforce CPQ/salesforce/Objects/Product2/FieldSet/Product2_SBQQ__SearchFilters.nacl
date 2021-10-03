@@ -2,12 +2,12 @@ salesforce.FieldSet Product2_SBQQ__SearchFilters {
   fullName = "Product2.SBQQ__SearchFilters"
   availableFields = [
     {
-      field = "Description"
+      field = salesforce.Product2.field.Description
       isFieldManaged = false
       isRequired = false
     },
     {
-      field = "SBQQ__HasConsumptionSchedule__c"
+      field = salesforce.Product2.field.SBQQ__HasConsumptionSchedule__c
       isFieldManaged = false
       isRequired = false
     },
@@ -15,17 +15,17 @@ salesforce.FieldSet Product2_SBQQ__SearchFilters {
   description = "Fields that are used as search filters in quote product lookup."
   displayedFields = [
     {
-      field = "ProductCode"
+      field = salesforce.Product2.field.ProductCode
       isFieldManaged = false
       isRequired = false
     },
     {
-      field = "Name"
+      field = salesforce.Product2.field.Name
       isFieldManaged = false
       isRequired = false
     },
     {
-      field = "Family"
+      field = salesforce.Product2.field.Family
       isFieldManaged = false
       isRequired = false
     },

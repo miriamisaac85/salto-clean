@@ -104,6 +104,7 @@ type salesforce.Macro {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsLightningSupported {
     apiName = "Macro.IsLightningSupported"
@@ -112,6 +113,7 @@ type salesforce.Macro {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist StartingContext {
     apiName = "Macro.StartingContext"

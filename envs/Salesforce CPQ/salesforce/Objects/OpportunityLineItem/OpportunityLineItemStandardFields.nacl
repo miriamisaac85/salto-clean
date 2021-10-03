@@ -60,6 +60,7 @@ type salesforce.OpportunityLineItem {
     caseSensitive = false
     length = 255
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text Name {
     apiName = "OpportunityLineItem.Name"
@@ -70,6 +71,7 @@ type salesforce.OpportunityLineItem {
     caseSensitive = false
     length = 376
     queryable = true
+    _hidden_value = true
   }
   salesforce.Number Quantity {
     apiName = "OpportunityLineItem.Quantity"
@@ -108,6 +110,7 @@ type salesforce.OpportunityLineItem {
     scale = 2
     precision = 18
     queryable = true
+    _hidden_value = true
   }
   salesforce.Date ServiceDate {
     apiName = "OpportunityLineItem.ServiceDate"
@@ -188,11 +191,13 @@ type salesforce.OpportunityLineItem {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown Subtotal {
     apiName = "OpportunityLineItem.Subtotal"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

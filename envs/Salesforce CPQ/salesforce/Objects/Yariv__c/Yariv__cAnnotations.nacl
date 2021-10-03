@@ -263,6 +263,8 @@ type salesforce.Yariv__c {
     enableTopics = false
   }
   _generated_dependencies = [
-    salesforce.LightningPage.instance.Yarivs,
+    {
+      reference = salesforce.LightningPage.instance.Yarivs
+    },
   ]
 }

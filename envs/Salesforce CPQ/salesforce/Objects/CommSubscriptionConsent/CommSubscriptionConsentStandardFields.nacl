@@ -170,5 +170,22 @@ type salesforce.CommSubscriptionConsent {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup BusinessBrandId {
+    apiName = "CommSubscriptionConsent.BusinessBrandId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup PartyRoleId {
+    apiName = "CommSubscriptionConsent.PartyRoleId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
   }
 }

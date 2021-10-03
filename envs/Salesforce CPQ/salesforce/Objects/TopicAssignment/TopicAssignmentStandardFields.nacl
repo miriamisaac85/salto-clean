@@ -134,6 +134,7 @@ type salesforce.TopicAssignment {
     caseSensitive = false
     length = 3
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text EntityType {
     apiName = "TopicAssignment.EntityType"
@@ -144,6 +145,7 @@ type salesforce.TopicAssignment {
     caseSensitive = false
     length = 80
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "TopicAssignment.CreatedDate"

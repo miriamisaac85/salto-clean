@@ -197,4 +197,7 @@ salesforce.LightningPage Contact_Record_Page1 {
     name = "flexipage:recordHomeThreeColTemplateDesktop"
   }
   type = "RecordPage"
+  _parent = [
+    salesforce.Contact,
+  ]
 }

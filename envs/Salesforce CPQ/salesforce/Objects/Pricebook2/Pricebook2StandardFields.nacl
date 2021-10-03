@@ -90,6 +90,7 @@ type salesforce.Pricebook2 {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Text Description {
     apiName = "Pricebook2.Description"
@@ -108,5 +109,6 @@ type salesforce.Pricebook2 {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
 }

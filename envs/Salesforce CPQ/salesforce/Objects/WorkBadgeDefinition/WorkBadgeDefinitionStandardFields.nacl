@@ -157,6 +157,7 @@ type salesforce.WorkBadgeDefinition {
     scale = 0
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsRewardBadge {
     apiName = "WorkBadgeDefinition.IsRewardBadge"
@@ -165,5 +166,6 @@ type salesforce.WorkBadgeDefinition {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
 }

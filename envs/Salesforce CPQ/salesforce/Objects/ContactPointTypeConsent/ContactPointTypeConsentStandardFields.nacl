@@ -272,5 +272,22 @@ type salesforce.ContactPointTypeConsent {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup BusinessBrandId {
+    apiName = "ContactPointTypeConsent.BusinessBrandId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup PartyRoleId {
+    apiName = "ContactPointTypeConsent.PartyRoleId"
+    trackHistory = "false"
+    queryable = false
+    updateable = false
+    createable = false
+    _hidden_value = true
   }
 }

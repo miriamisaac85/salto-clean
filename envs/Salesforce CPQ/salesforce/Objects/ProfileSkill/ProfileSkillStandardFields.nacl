@@ -95,6 +95,7 @@ type salesforce.ProfileSkill {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "ProfileSkill.Description"

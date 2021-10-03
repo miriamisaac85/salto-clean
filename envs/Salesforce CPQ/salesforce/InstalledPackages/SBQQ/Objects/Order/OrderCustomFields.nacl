@@ -130,6 +130,7 @@ type salesforce.Order {
     summaryForeignKey = "OrderItem.OrderId"
     summaryOperation = "sum"
     trackHistory = "false"
+    _hidden_value = true
   }
   salesforce.Summary SBQQ__TaxAmount__c {
     apiName = "Order.SBQQ__TaxAmount__c"
@@ -145,5 +146,6 @@ type salesforce.Order {
     summaryForeignKey = "OrderItem.OrderId"
     summaryOperation = "sum"
     trackHistory = "false"
+    _hidden_value = true
   }
 }

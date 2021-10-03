@@ -349,7 +349,11 @@ type salesforce.Lead {
     enableTopics = true
   }
   _generated_dependencies = [
-    salesforce.LightningPage.instance.Lead_Record_Page,
-    salesforce.LightningPage.instance.Lead_Record_Page1,
+    {
+      reference = salesforce.LightningPage.instance.Lead_Record_Page
+    },
+    {
+      reference = salesforce.LightningPage.instance.Lead_Record_Page1
+    },
   ]
 }

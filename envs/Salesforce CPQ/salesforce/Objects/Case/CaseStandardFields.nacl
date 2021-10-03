@@ -26,6 +26,7 @@ type salesforce.Case {
     updateable = false
     relationshipName = "MasterRecord"
     queryable = true
+    _hidden_value = true
   }
   salesforce.AutoNumber CaseNumber {
     apiName = "Case.CaseNumber"
@@ -318,6 +319,7 @@ type salesforce.Case {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.DateTime ClosedDate {
     apiName = "Case.ClosedDate"
@@ -325,6 +327,7 @@ type salesforce.Case {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsEscalated {
     apiName = "Case.IsEscalated"
@@ -404,6 +407,7 @@ type salesforce.Case {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Phone ContactMobile {
     apiName = "Case.ContactMobile"
@@ -411,6 +415,7 @@ type salesforce.Case {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Email ContactEmail {
     apiName = "Case.ContactEmail"
@@ -419,6 +424,7 @@ type salesforce.Case {
     updateable = false
     unique = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Phone ContactFax {
     apiName = "Case.ContactFax"
@@ -426,6 +432,7 @@ type salesforce.Case {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Comments {
     apiName = "Case.Comments"
@@ -443,6 +450,7 @@ type salesforce.Case {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Lookup BusinessHoursId {
     apiName = "Case.BusinessHoursId"
@@ -452,6 +460,7 @@ type salesforce.Case {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown IsClosedOnCreate {
     apiName = "Case.IsClosedOnCreate"
@@ -461,6 +470,7 @@ type salesforce.Case {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Lookup SourceId {
     apiName = "Case.SourceId"
@@ -470,5 +480,6 @@ type salesforce.Case {
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

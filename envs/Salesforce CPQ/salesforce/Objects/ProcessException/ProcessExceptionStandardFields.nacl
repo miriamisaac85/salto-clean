@@ -217,6 +217,7 @@ type salesforce.ProcessException {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.Picklist Status {
     apiName = "ProcessException.Status"
@@ -397,6 +398,7 @@ type salesforce.ProcessException {
     createable = false
     updateable = false
     queryable = true
+    _hidden_value = true
   }
   salesforce.LongTextArea Description {
     apiName = "ProcessException.Description"

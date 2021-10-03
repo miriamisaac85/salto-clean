@@ -496,17 +496,20 @@ type salesforce.SocialPersona {
     caseSensitive = false
     length = 1024
     queryable = true
+    _hidden_value = true
   }
   salesforce.Unknown Klout {
     apiName = "SocialPersona.Klout"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
   salesforce.Unknown UserId {
     apiName = "SocialPersona.UserId"
     queryable = false
     updateable = false
     createable = false
+    _hidden_value = true
   }
 }

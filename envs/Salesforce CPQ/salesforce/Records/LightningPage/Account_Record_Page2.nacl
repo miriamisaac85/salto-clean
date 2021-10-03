@@ -197,4 +197,7 @@ salesforce.LightningPage Account_Record_Page2 {
     name = "flexipage:recordHomeThreeColTemplateDesktop"
   }
   type = "RecordPage"
+  _parent = [
+    salesforce.Account,
+  ]
 }
