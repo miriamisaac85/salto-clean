@@ -1,0 +1,11 @@
+salesforce.Profile Custom_3A_Marketing_Profile@pss {
+  recordTypeVisibilities = {
+    Idea = {
+      InternalIdeasIdeaRecordType = {
+        default = false
+        recordType = salesforce.RecordType.instance.Idea_InternalIdeasIdeaRecordType
+        visible = false
+      }
+    }
+  }
+}

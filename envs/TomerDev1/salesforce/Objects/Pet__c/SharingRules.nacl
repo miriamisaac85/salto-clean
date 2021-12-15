@@ -1,0 +1,6 @@
+salesforce.SharingRules Pet__c {
+  fullName = "Pet__c"
+  _parent = [
+    salesforce.Pet__c,
+  ]
+}

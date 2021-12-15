@@ -12,5 +12,9 @@ envs {
       uuid = "11a0cb10-0308-4b46-ad92-3ce252904b96"
       folderName = "Salesforce CPQ"
     },
+    {
+      uuid = "1184a231-a86f-4cb8-bc71-d8d23a024ea5"
+      folderName = "TomerDev1"
+    },
   ]
 }

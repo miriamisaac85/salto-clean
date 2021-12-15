@@ -1,0 +1,8 @@
+salesforce.Profile Chatter_Moderator_User@s {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

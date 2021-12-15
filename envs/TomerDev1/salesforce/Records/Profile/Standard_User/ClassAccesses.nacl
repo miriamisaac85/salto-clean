@@ -1,0 +1,8 @@
+salesforce.Profile Standard {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

@@ -1,0 +1,8 @@
+salesforce.Profile Custom_3A_Support_Profile@pss {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

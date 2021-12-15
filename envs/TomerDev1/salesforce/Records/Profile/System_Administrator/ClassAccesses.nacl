@@ -1,0 +1,8 @@
+salesforce.Profile Admin {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = true
+    }
+  }
+}

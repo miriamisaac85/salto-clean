@@ -1,0 +1,92 @@
+salesforce.Flow sample_flow {
+  fullName = "sample_flow"
+  apiVersion = 49
+  assignments = [
+    {
+      name = "sample_assignment"
+      label = "sample assignment"
+      locationX = 350
+      locationY = 46
+      assignmentItems = [
+        {
+          assignToReference = "sample_lead_var"
+          operator = "Assign"
+          value = {
+            elementReference = "sample_get_records"
+          }
+        },
+      ]
+    },
+  ]
+  interviewLabel = "sample flow {!$Flow.CurrentDateTime}"
+  label = "sample flow"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      name = "sample_get_records"
+      label = "sample_get_records"
+      locationX = 202
+      locationY = 53
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "sample_assignment"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = "Country"
+          operator = "EqualTo"
+          value = {
+            stringValue = "IL"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.Lead
+      storeOutputAutomatically = true
+    },
+  ]
+  start = {
+    locationX = 50
+    locationY = 50
+    connector = {
+      targetReference = "sample_get_records"
+    }
+    object = salesforce.Campaign
+    recordTriggerType = "Create"
+    triggerType = "RecordBeforeSave"
+  }
+  status = "Draft"
+  variables = [
+    {
+      name = "sample_lead_var"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = salesforce.Lead
+    },
+    {
+      name = "sample_var"
+      dataType = "Number"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      scale = 2
+    },
+  ]
+}

@@ -1,0 +1,8 @@
+salesforce.Profile High_Volume_Customer_Portal_User@s {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

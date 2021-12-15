@@ -1,0 +1,8 @@
+salesforce.Profile Silver_Partner_User@s {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

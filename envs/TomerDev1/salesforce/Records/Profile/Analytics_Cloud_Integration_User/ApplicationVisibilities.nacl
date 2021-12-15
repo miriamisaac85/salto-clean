@@ -1,0 +1,109 @@
+salesforce.Profile Analytics_Cloud_Integration_User@s {
+  applicationVisibilities = {
+    standard__AllTabSet = {
+      application = salesforce.CustomApplication.instance.standard__AllTabSet
+      default = false
+      visible = false
+    }
+    standard__AppLauncher = {
+      application = salesforce.CustomApplication.instance.standard__AppLauncher
+      default = false
+      visible = false
+    }
+    standard__Chatter = {
+      application = salesforce.CustomApplication.instance.standard__Chatter
+      default = false
+      visible = false
+    }
+    standard__Commerce = {
+      application = salesforce.CustomApplication.instance.standard__Commerce
+      default = false
+      visible = false
+    }
+    standard__Community = {
+      application = salesforce.CustomApplication.instance.standard__Community
+      default = false
+      visible = false
+    }
+    standard__Content = {
+      application = salesforce.CustomApplication.instance.standard__Content
+      default = false
+      visible = false
+    }
+    standard__Insights = {
+      application = salesforce.CustomApplication.instance.standard__Insights
+      default = false
+      visible = false
+    }
+    standard__LightningBolt = {
+      application = salesforce.CustomApplication.instance.standard__LightningBolt
+      default = false
+      visible = false
+    }
+    standard__LightningInstrumentation = {
+      application = salesforce.CustomApplication.instance.standard__LightningInstrumentation
+      default = false
+      visible = false
+    }
+    standard__LightningSales = {
+      application = salesforce.CustomApplication.instance.standard__LightningSales
+      default = false
+      visible = false
+    }
+    standard__LightningSalesConsole = {
+      application = salesforce.CustomApplication.instance.standard__LightningSalesConsole
+      default = false
+      visible = false
+    }
+    standard__LightningScheduler = {
+      application = salesforce.CustomApplication.instance.standard__LightningScheduler
+      default = false
+      visible = false
+    }
+    standard__LightningService = {
+      application = salesforce.CustomApplication.instance.standard__LightningService
+      default = false
+      visible = false
+    }
+    standard__Marketing = {
+      application = salesforce.CustomApplication.instance.standard__Marketing
+      default = false
+      visible = false
+    }
+    standard__Platform = {
+      application = salesforce.CustomApplication.instance.standard__Platform
+      default = true
+      visible = true
+    }
+    standard__QueueManagement = {
+      application = salesforce.CustomApplication.instance.standard__QueueManagement
+      default = false
+      visible = false
+    }
+    standard__Sales = {
+      application = salesforce.CustomApplication.instance.standard__Sales
+      default = false
+      visible = false
+    }
+    standard__SalesforceCMS = {
+      application = salesforce.CustomApplication.instance.standard__SalesforceCMS
+      default = false
+      visible = false
+    }
+    standard__Service = {
+      application = salesforce.CustomApplication.instance.standard__Service
+      default = false
+      visible = false
+    }
+    standard__ServiceConsole = {
+      application = salesforce.CustomApplication.instance.standard__ServiceConsole
+      default = false
+      visible = false
+    }
+    standard__Sites = {
+      application = salesforce.CustomApplication.instance.standard__Sites
+      default = false
+      visible = false
+    }
+  }
+}

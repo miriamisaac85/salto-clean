@@ -1,0 +1,10 @@
+salesforce.Certificate SelfSignedCert_20Jul2020_140650 {
+  caSigned = false
+  encryptedWithPlatformEncryption = false
+  expirationDate = "2021-07-20T12:00:00.000Z"
+  keySize = 2048
+  masterLabel = "SelfSignedCert_20Jul2020_140650"
+  privateKeyExportable = true
+  fullName = "SelfSignedCert_20Jul2020_140650"
+  content = file("salesforce/Records/Certificate/SelfSignedCert_20Jul2020_140650.crt")
+}

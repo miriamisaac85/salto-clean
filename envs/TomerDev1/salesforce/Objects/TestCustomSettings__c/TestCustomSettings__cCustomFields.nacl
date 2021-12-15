@@ -1,0 +1,14 @@
+type salesforce.TestCustomSettings__c {
+  salesforce.Text TestText__c {
+    apiName = "TestCustomSettings__c.TestText__c"
+    label = "TestText"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    length = 50
+    queryable = true
+    externalId = false
+    trackTrending = false
+  }
+}

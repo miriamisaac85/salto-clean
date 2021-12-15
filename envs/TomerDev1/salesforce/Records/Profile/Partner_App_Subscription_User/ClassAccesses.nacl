@@ -1,0 +1,8 @@
+salesforce.Profile Partner_App_Subscription_User@s {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

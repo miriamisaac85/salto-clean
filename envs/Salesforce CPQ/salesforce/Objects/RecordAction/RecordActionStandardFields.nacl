@@ -365,6 +365,12 @@ type salesforce.RecordAction {
         isActive = true
       },
       {
+        fullName = "QuickActionDefinition.FeedItem.AnnouncementPost"
+        default = false
+        label = "QuickActionDefinition.FeedItem.AnnouncementPost"
+        isActive = true
+      },
+      {
         fullName = "QuickActionDefinition.FeedItem.ContentNote"
         default = false
         label = "QuickActionDefinition.FeedItem.ContentNote"

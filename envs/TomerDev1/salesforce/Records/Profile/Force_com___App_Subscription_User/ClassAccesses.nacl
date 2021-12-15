@@ -1,0 +1,8 @@
+salesforce.Profile Force_2Ecom___App_Subscription_User@psbsss {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

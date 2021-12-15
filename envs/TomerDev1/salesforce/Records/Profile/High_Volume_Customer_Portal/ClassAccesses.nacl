@@ -1,0 +1,8 @@
+salesforce.Profile HighVolumePortal {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

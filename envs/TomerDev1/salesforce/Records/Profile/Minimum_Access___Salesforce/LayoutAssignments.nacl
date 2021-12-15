@@ -1,0 +1,89 @@
+salesforce.Profile Minimum_Access___Salesforce@ssbs {
+  layoutAssignments = {
+    AssetAction_Asset_Action_Layout@bss = [
+      {
+        layout = salesforce.Layout.instance.AssetAction_Asset_Action_Layout@bss
+      },
+    ]
+    AssetActionSource_Asset_Action_Source_Layout@bsss = [
+      {
+        layout = salesforce.Layout.instance.AssetActionSource_Asset_Action_Source_Layout@bsss
+      },
+    ]
+    AssetStatePeriod_Asset_State_Period_Layout@bsss = [
+      {
+        layout = salesforce.Layout.instance.AssetStatePeriod_Asset_State_Period_Layout@bsss
+      },
+    ]
+    AssociatedLocation_Associated_Location_Layout@bss = [
+      {
+        layout = salesforce.Layout.instance.AssociatedLocation_Associated_Location_Layout@bss
+      },
+    ]
+    BusinessBrand_Business_Brand_Layout@bss = [
+      {
+        layout = salesforce.Layout.instance.BusinessBrand_Business_Brand_Layout@bss
+      },
+    ]
+    Customer_Customer_Layout@bs = [
+      {
+        layout = salesforce.Layout.instance.Customer_Customer_Layout@bs
+      },
+    ]
+    FeedItem_Feed_Item_Layout@bss = [
+      {
+        layout = salesforce.Layout.instance.FeedItem_Feed_Item_Layout@bss
+      },
+    ]
+    FinanceBalanceSnapshot_Finance_Balance_Snapshot_Layout@bsss = [
+      {
+        layout = salesforce.Layout.instance.FinanceBalanceSnapshot_Finance_Balance_Snapshot_Layout@bsss
+      },
+    ]
+    FinanceTransaction_Finance_Transaction_Layout@bss = [
+      {
+        layout = salesforce.Layout.instance.FinanceTransaction_Finance_Transaction_Layout@bss
+      },
+    ]
+    LegalEntity_Legal_Entity_Layout@bss = [
+      {
+        layout = salesforce.Layout.instance.LegalEntity_Legal_Entity_Layout@bss
+      },
+    ]
+    Location_Location_Layout@bs = [
+      {
+        layout = salesforce.Layout.instance.Location_Location_Layout@bs
+      },
+    ]
+    ProcessException_Process_Exception_Layout@bss = [
+      {
+        layout = salesforce.Layout.instance.ProcessException_Process_Exception_Layout@bss
+      },
+    ]
+    ReturnOrder_Return_Order_Layout@bss = [
+      {
+        layout = salesforce.Layout.instance.ReturnOrder_Return_Order_Layout@bss
+      },
+    ]
+    ReturnOrderItemAdjustment_Return_Order_Item_Adjustment_Layout@bssss = [
+      {
+        layout = salesforce.Layout.instance.ReturnOrderItemAdjustment_Return_Order_Item_Adjustment_Layout@bssss
+      },
+    ]
+    ReturnOrderItemTax_Return_Order_Item_Tax_Layout@bssss = [
+      {
+        layout = salesforce.Layout.instance.ReturnOrderItemTax_Return_Order_Item_Tax_Layout@bssss
+      },
+    ]
+    ReturnOrderLineItem_Return_Order_Line_Item_Layout@bssss = [
+      {
+        layout = salesforce.Layout.instance.ReturnOrderLineItem_Return_Order_Line_Item_Layout@bssss
+      },
+    ]
+    Seller_Seller_Layout@bs = [
+      {
+        layout = salesforce.Layout.instance.Seller_Seller_Layout@bs
+      },
+    ]
+  }
+}

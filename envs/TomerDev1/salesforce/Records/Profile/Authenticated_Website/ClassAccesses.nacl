@@ -1,0 +1,8 @@
+salesforce.Profile Authenticated_Website@s {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

@@ -1,0 +1,8 @@
+salesforce.Profile Partner_Community_User@s {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

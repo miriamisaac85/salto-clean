@@ -1,0 +1,8 @@
+salesforce.Profile SolutionManager {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

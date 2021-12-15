@@ -1,0 +1,16 @@
+salesforce.Profile Authenticated_Website@s {
+  flowAccesses = {
+    Sample_Process = {
+      enabled = false
+      flow = salesforce.Flow.instance.Sample_Process
+    }
+    TestEmailAlert = {
+      enabled = false
+      flow = salesforce.Flow.instance.TestEmailAlert
+    }
+    sample_flow = {
+      enabled = false
+      flow = salesforce.Flow.instance.sample_flow
+    }
+  }
+}

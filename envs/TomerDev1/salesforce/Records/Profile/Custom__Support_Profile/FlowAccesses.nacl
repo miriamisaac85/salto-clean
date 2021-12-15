@@ -1,0 +1,16 @@
+salesforce.Profile Custom_3A_Support_Profile@pss {
+  flowAccesses = {
+    Sample_Process = {
+      enabled = false
+      flow = salesforce.Flow.instance.Sample_Process
+    }
+    TestEmailAlert = {
+      enabled = false
+      flow = salesforce.Flow.instance.TestEmailAlert
+    }
+    sample_flow = {
+      enabled = false
+      flow = salesforce.Flow.instance.sample_flow
+    }
+  }
+}

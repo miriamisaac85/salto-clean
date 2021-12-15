@@ -1,0 +1,8 @@
+salesforce.Profile Customer_Portal_Manager_Custom@s {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

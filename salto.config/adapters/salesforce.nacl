@@ -25,9 +25,6 @@ salesforce {
           metadataType = "DashboardFolder"
         },
         {
-          metadataType = "Profile"
-        },
-        {
           metadataType = "PermissionSet"
         },
         {

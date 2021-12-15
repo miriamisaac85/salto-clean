@@ -1,0 +1,111 @@
+type salesforce.Pet__c {
+  salesforce.DateTime Last_visit__c {
+    apiName = "Pet__c.Last_visit__c"
+    label = "Last visit"
+    createable = true
+    updateable = true
+    queryable = true
+    description = "some desc"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Picklist Pet_Type__c {
+    apiName = "Pet__c.Pet_Type__c"
+    label = "Pet Type"
+    _required = true
+    valueSet = [
+      {
+        fullName = "fish"
+        default = false
+        label = "fish"
+      },
+      {
+        fullName = "cat"
+        default = false
+        label = "cat"
+      },
+      {
+        fullName = "dog"
+        default = false
+        label = "dog"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    description = "The type of the pet"
+    externalId = false
+    trackTrending = false
+    sorted = false
+  }
+  salesforce.FormulaText Sound__c {
+    apiName = "Pet__c.Sound__c"
+    label = "Sound"
+    formula = '''
+CASE(Pet_Type__c,
+"dog", "woof",
+"cat", "mew",
+"")
+'''
+    inlineHelpText = "The sound of the pet"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    length = 1300
+    queryable = true
+    description = "A formula"
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+    _generated_dependencies = [
+      {
+        reference = salesforce.Pet__c.field.Pet_Type__c
+      },
+    ]
+  }
+  salesforce.Number Age__c {
+    apiName = "Pet__c.Age__c"
+    label = "Age"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    description = "The age of the pet"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.Number test1__c {
+    apiName = "Pet__c.test1__c"
+    label = "test1"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    description = "test description"
+    externalId = false
+    trackTrending = false
+  }
+  salesforce.FormulaNumber Formula1__c {
+    apiName = "Pet__c.Formula1__c"
+    label = "Formula1"
+    precision = 18
+    scale = 2
+    formula = "MIN(1, 3, 3, 4, 5, 13)"
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    description = "some desc"
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+    trackTrending = false
+    _hidden_value = true
+  }
+}

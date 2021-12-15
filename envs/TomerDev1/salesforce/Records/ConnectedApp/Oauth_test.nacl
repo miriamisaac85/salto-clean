@@ -1,0 +1,17 @@
+salesforce.ConnectedApp Oauth_test {
+  fullName = "Oauth_test"
+  contactEmail = "tomer.mevorach@salto.io"
+  label = "Oauth_test"
+  oauthConfig = {
+    callbackUrl = "http://localhost:1234"
+    consumerKey = "3MVG9xB_D1giir9qPkNsQUqxLP.9e_FqB5dfY8x658P4Jk33cZQfJj8_x5Z9rlAVnfXHSK0yQDhP_h2aW2D1a"
+    isAdminApproved = false
+    isConsumerSecretOptional = false
+    isIntrospectAllTokens = false
+    scopes = "Full"
+  }
+  oauthPolicy = {
+    ipRelaxation = "ENFORCE"
+    refreshTokenPolicy = "infinite"
+  }
+}

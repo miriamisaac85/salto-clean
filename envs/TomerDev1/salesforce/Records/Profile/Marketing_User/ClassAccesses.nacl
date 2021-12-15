@@ -1,0 +1,8 @@
+salesforce.Profile MarketingProfile {
+  classAccesses = {
+    SampleApex = {
+      apexClass = salesforce.ApexClass.instance.SampleApex
+      enabled = false
+    }
+  }
+}

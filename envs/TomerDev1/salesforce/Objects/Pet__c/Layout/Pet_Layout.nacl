@@ -1,0 +1,103 @@
+salesforce.Layout Pet__c_Pet_Layout@uubs {
+  fullName = "Pet__c-Pet Layout"
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Pet__c.field.Last_visit__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Pet__c.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Pet__c.field.Pet_Type__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Pet__c.field.Sound__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Pet__c.field.Age__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Pet__c.field.test1__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Pet__c.field.Formula1__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Pet__c.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Pet__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Pet__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = true
+      detailHeading = false
+      editHeading = true
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h3z00000sA55a"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  _parent = [
+    salesforce.Pet__c,
+  ]
+}

@@ -1,0 +1,83 @@
+type salesforce.QueueSobject {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string sobjectType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AlternativePaymentMethod",
+        "AuthorizationForm",
+        "AuthorizationFormConsent",
+        "AuthorizationFormDataUse",
+        "BusinessBrand",
+        "Case",
+        "CommSubscription",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "ConsumptionSchedule",
+        "ContactPointAddress",
+        "ContactPointConsent",
+        "ContactPointEmail",
+        "ContactPointPhone",
+        "ContactPointTypeConsent",
+        "ContactRequest",
+        "CreditMemo",
+        "Customer",
+        "DataUseLegalBasis",
+        "DataUsePurpose",
+        "EngagementChannelType",
+        "FinanceBalanceSnapshot",
+        "FinanceTransaction",
+        "Goal",
+        "Image",
+        "Invoice",
+        "Lead",
+        "LegalEntity",
+        "LocWaitlistMsgTemplate",
+        "Location",
+        "LocationGroup",
+        "LocationWaitlist",
+        "LocationWaitlistedParty",
+        "Macro",
+        "MessagingEndUser",
+        "MessagingSession",
+        "Metric",
+        "Order",
+        "PartyConsent",
+        "Pet__c",
+        "ProcessException",
+        "QuickText",
+        "ReturnOrder",
+        "Scorecard",
+        "Seller",
+        "ServiceAppointment",
+        "ServiceResource",
+        "ServiceTerritory",
+        "Task",
+        "UserProvisioningRequest",
+        "WorkCoaching",
+        "WorkFeedback",
+        "WorkFeedbackQuestion",
+        "WorkFeedbackQuestionSet",
+        "WorkFeedbackRequest",
+        "WorkFeedbackTemplate",
+        "WorkPerformanceCycle",
+        "WorkType",
+        "WorkTypeGroup",
+      ]
+    }
+  }
+  metadataType = "QueueSobject"
+}

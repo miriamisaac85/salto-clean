@@ -1,0 +1,16 @@
+salesforce.WorkflowAlert Account_samle_email_alert@vuu {
+  fullName = "Account.samle_email_alert"
+  description = "some desc.."
+  protected = false
+  recipients = [
+    {
+      recipient = "tomer.mevorach+dev1@salto.io"
+      type = "user"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = "unfiled$public/MarketingProductInquiryResponse"
+  _parent = [
+    salesforce.Account,
+  ]
+}
