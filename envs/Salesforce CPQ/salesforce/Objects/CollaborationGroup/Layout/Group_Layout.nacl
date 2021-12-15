@@ -106,9 +106,6 @@ salesforce.Layout CollaborationGroup_Group_Layout@bs {
   quickActionList = {
     quickActionListItems = [
       {
-        quickActionName = "FeedItem.AnnouncementPost"
-      },
-      {
         quickActionName = "FeedItem.ContentNote"
       },
       {
