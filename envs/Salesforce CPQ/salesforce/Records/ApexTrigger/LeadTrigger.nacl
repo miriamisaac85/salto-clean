@@ -4,8 +4,6 @@ salesforce.ApexTrigger LeadTrigger {
   fullName = "LeadTrigger"
   content = file("salesforce/Records/ApexTrigger/LeadTrigger.trigger")
   _generated_dependencies = [
-    {
-      reference = salesforce.Lead
-    },
+    salesforce.Lead,
   ]
 }
